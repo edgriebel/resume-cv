@@ -1,0 +1,643 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% See "README.md" for instructions on compiling this document.
+
+\documentclass[letterpaper,MMMMyyyy,nonstopmode]{simpleresumecv}
+% Class options:
+% a4paper, letterpaper, nonstopmode, draftmode
+% MMMyyyy, ddMMMyyyy, MMMMyyyy, ddMMMMyyyy, yyyyMMdd, yyyyMM, yyyy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{Edward E Griebel Jr.}
+\newcommand{\CVTitle}{Ed Griebel's CV for Website}
+\newcommand{\CVNote}{CV compiled on {\today} for Website}
+\newcommand{\CVWebpage}{http://www.edgriebel.com/}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={\CVWebpage},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+unicode=true,
+bookmarks=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Shorthand.
+\newcommand{\Code}[1]{\mbox{\textbf{#1}}}
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%% Use Sans font
+%% Default Sans font looks not too sharp, Company name in Serif font
+%%\renewcommand\familydefault{\sfdefault}
+
+%% \UseSecondaryFont %% <-- Doesn't work, doesn't switch font
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\Title{\CVAuthor}
+
+\begin{SubTitle}
+%%
+%% REPLACE WITH ADDRESS
+%%
+%% \textit{<my address>}
+\par
+\href{mailto:edgriebel@gmail.com}
+{edgriebel@gmail.com}
+%%
+%% REPLACE WITH CELLPHONE 
+%%
+%% \,\SubBulletSymbol\, \textit{<cellphone>}
+\,\SubBulletSymbol\,
+\href{\CVWebpage}
+{\url{\CVWebpage}}
+
+\href{https://github.com/edgriebel}{https://github.com/edgriebel}
+\,\SubBulletSymbol\,
+\href{https://www.linkedin.com/in/edgriebel}{https://linkedin.com/in/edgriebel}
+\end{SubTitle}
+
+\begin{Body}
+\Section{Summary}{Summary}{PDF:Summary}
+\Entry
+Full Stack Java architect, developer, and consultant, specializing in Java/Oracle/JavaScript
+solutions and integrations.
+\Gap
+\textit{Technical Specialties}: Java, J2EE/JavaEE, SQL, PL/SQL, JavaScript, CSS, JMS, jQuery, jQuery UI, RabbitMQ, Oracle, Cognos, JBoss, WebLogic, AppDynamics.
+\Gap
+\textit{Business Specialties}: Agile team leadership, customer-focused development, requirements gathering and analysis, technical liaison, systems integration, business intelligence
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PROFESSIONAL WORK EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Professional\newline
+Work Experience}
+{Professional Work Experience}
+{PDF:ProfessionalWorkExperience}
+
+\Entry
+\href{http://www.paychex.com/}
+{\textbf{Paychex, Inc}}
+\hfill 
+Rochester, New York, USA
+
+%%\Gap
+%%\BulletItem
+Middleware Architect
+\hfill
+\DatestampYM{2013}{06} --
+Present
+
+\begin{Detail}
+\BulletItem
+Created an internal IT Inventory system in HTML5/JavaScript/Java/RabbitMQ to provide single source of truth and display relationships between virtual and physical hosts, JVM/CLR runtimes, databases, and middleware infrastructure.
+\BulletItem
+Lead developer on system to gather and present metrics from hosts, JVMs, and middleware components, used to send alerts for problems and provide a single location to view runtime metrics.
+\BulletItem
+Created tools
+in Python to automate configuration and installation of AppDynamics on thousands of Weblogic servers using Weblogic WLST
+scripting tool.
+\BulletItem
+Member of cross-functional team for selection, prototyping, and implementation of AppDynamics application monitoring tool. 
+
+\Gap
+Technologies: Java, JavaScript, JQuery-UI, Oracle PL/SQL, middleware, AppDynamics, Application Performance Monitoring, ClearCase, Ant, Git, JUnit
+\end{Detail}
+
+\BigGap
+
+\Entry
+\textbf{Axeda, Inc} (division of PTC)
+\hfill 
+Rochester, New York, USA
+
+%%\Gap
+%%\BulletItem
+Senior Software Engineer, R\&D
+\hfill
+\DatestampYM{2010}{06} --  \DatestampYM{2013}{06}
+
+\begin{Detail}
+\BulletItem
+Full stack Java/Oracle/ActiveMQ JMS developer for IoT system.
+\BulletItem
+Lead for Cognos Business Intelligence integration with IoT data. Integrated Groovy with Cognos to script report creation, execution, publishing, and administration.
+\BulletItem
+Internal consulting for new and existing solutions for professional services and product management teams.
+
+\Gap
+Technologies: Java, JavaScript, JBoss, Oracle PL/SQL, Hudson/Jenkins, JUnit, Cognos, Business Intelligence, Maven, SVN
+\end{Detail}
+
+\BigGap
+\Entry
+\href{http://www.paychex.com/}
+{\textbf{Paychex, Inc}}
+\hfill 
+Rochester, New York, USA
+
+%%\Gap
+%%\BulletItem
+Lead Developer
+\hfill
+\DatestampYM{2005}{03} --  \DatestampYM{2010}{06}
+
+\begin{Detail}
+\BulletItem
+Development lead for team converting two existing Java/JSP/Oracle public-facing applications to HTML5 with YUI JavaScript library
+\BulletItem
+Development lead for team that created new public-facing Java web application to enable customers to directly enter employee information that previously required manual intervention and re-keying.
+\BulletItem
+Mentored new developers and delivered technical training to extended development team.
+\BulletItem
+Member of architecture team to research and set five-year strategy for web application strategy.
+
+\Gap
+Technologies: Java, JavaScript, JSP, Struts, WebLogic, Oracle PL/SQL, Hudson/Jenkins, JUnit, clearCase, Ant
+\end{Detail}
+
+\BigGap
+\Entry
+\href{http://www.frontier.com/}
+{\textbf{Frontier Communications}}
+\hfill 
+Rochester, New York, USA
+
+%%\Gap
+%%\BulletItem
+Senior Software Developer
+\hfill
+\DatestampYM{2001}{11} --  \DatestampYM{2005}{03}
+
+\begin{Detail}
+\BulletItem
+Created Java web application to build and troubleshoot DSL circuits via vendor's SOAP API.
+\BulletItem
+Maintained Java/Oracle web application that tracked and displayed commissions for 600 salespeople.
+\BulletItem
+Completely automated weekly generation of 20 Excel spreadsheets containing partitioned sales data from EssBase Data Warehouse saving \$250,000 annually in personnel costs.
+\BulletItem
+Implemented CruiseControl for Continuous Integration of Java projects.
+
+\Gap
+Technologies: Java, JSP, Struts, Oracle PL/SQL, Continuous Integration, JUnit, Excel VBA, EssBase Data Warehouse, Ant
+\end{Detail}
+
+\BigGap
+\Entry
+\href{http://www.globalcrossing.com/}
+{\textbf{Global  Crossing} (division of Level3)}
+\hfill 
+Rochester, New York, USA
+
+%%\Gap
+%%\BulletItem
+Senior Software Developer
+\hfill
+\DatestampYM{1999}{03} --  \DatestampYM{2001}{11}
+
+\begin{Detail}
+\BulletItem
+Development lead for multi-site team creating Java application to reconcile data network devices with order entry systems.
+\BulletItem
+Development lead for Perl CGI application to automatically create data circuits on ATM and Frame Relay data networks, saving users ten minutes per circuit.
+
+\Gap
+Technologies: Perl, CGI, Java, Sybase, Solaris, Ant
+\end{Detail}
+
+\BigGap
+\Entry
+\href{http://www.jpmorganchase.com/}
+{\textbf{JP Morgan}}
+\hfill 
+New York, New York, USA
+
+%%\Gap
+%%\BulletItem
+Lead Developer
+\hfill
+\DatestampYM{1995}{06} -- \DatestampYM{1999}{02}
+
+\begin{Detail}
+\BulletItem
+Created trading systems and calculation engines in C and C++.
+\BulletItem
+Implemented processes and applications for position tracking for derivatives High-Frequency Trading desk.
+
+\Gap
+Technologies: C, C++, Sybase, Excel VBA, ClearCase
+\end{Detail}
+
+\BigGap
+\Entry
+\href{http://www.blackrock.com/}
+{\textbf{BlackRock Financial Management}}
+\hfill 
+New York, New York, USA
+
+%%\Gap
+%%\BulletItem
+Software Developer
+\hfill
+\DatestampYM{1993}{03} --  \DatestampYM{1995}{06}
+
+\begin{Detail}
+\BulletItem
+Developed systems in C and C++ for MBS (mortgage) bond, Treasury, and Repo trading desks
+\BulletItem
+Responsible for maintenance and monitoring of nightly trade and reconciliation process
+
+\Gap
+Technologies: C, C++, Sybase, tcl, ksh, Motif, X11
+\end{Detail}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\Section
+{Education}
+{Education}
+{PDF:Education}
+
+\Entry
+\href{http://www.bucknell.edu/}
+{\textbf{Bucknell University}}
+\hfill Lewisburg, Pennsylvania, USA
+
+%%\Gap
+%%\BulletItem
+B.S. in Computer Engineering
+\hfill
+\DatestampYM{1988}{09} --
+\DatestampYM{1992}{06}
+\begin{Detail}
+\BulletItem
+Senior design project creating reference implementation of DHCP protocol for RFCs 1531 and 1534
+\BulletItem
+Summer research internship in digital image processing
+\BulletItem
+Concentrations in Geology and Digital Electronics
+
+Technologies: Computer Science, C, VAX assembly, DHCP, TCP-IP, Digital Electronics
+\end{Detail}
+
+
+%%%%%%%%%%%%
+%% CERTIFICATIONS %%
+%%%%%%%%%%%%
+
+\Section
+{Certifications}
+{Certifications}
+{PDF:Certifications}
+
+\Entry
+\href{https://www.appdynamics.com/certifications/}
+{\textbf{AppDynamics Certified Implementations Professional}}
+\hfill
+\DatestampYM{2016}{11}
+\begin{Detail}
+\begin{quote}
+``An individual who attains the AppDynamics Certified Implementation Professional certification has demonstrated that he or she possesses the minimum acceptable level of knowledge and skills required to deploy AppDynamics Controllers, Agents, EUM Servers and Analytics Servers. 
+This individual also has experience using AppDynamics APIs to extend and customize the AppDynamics platform.''
+\end{quote}
+\end{Detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Lecture EXPERIENCE  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Presentation and Mentoring Experience}
+{Presentation and Mentoring Experience}
+{PDF:PresentationAndMentoringExperience}
+
+\Entry
+\textbf{Summer Co-Op Mentor}
+\hfill
+Summer 2014
+
+Paychex, Inc.
+\begin{Detail}
+\Item
+After interviewing a number of students, our team brought on a college student for three months. During that time I mentored them on their development tasks, our software development life cycle, version control, and working on a real-world development team. During this time I had the opportunity to give feedback on code, show how things learned in the classroom apply to corporate development, and work through actual software engineering problems.
+\end{Detail}
+
+\BigGap
+\Entry
+\textbf{Axeda Reporting -- A Guide to Service Intelligence} (Presentation)
+\hfill
+\DatestampYMD{2013}{05}{08}
+
+Axeda Connection Conference, Axeda, Inc.
+\begin{Detail}
+\Item
+Live presentation for Axeda customers to review and demonstrate new features added to the Cognos big data reporting product.
+\iffalse
+\Item
+From the conference program:
+\begin{quote}
+Service Intelligence enables your organization to apply analytics and decision-making, anytime, anywhere. See an overview of Axeda Reporting and what changes are coming in the near future. This session will include live demos of standard reports, as well creating custom reports with Report Studio.
+\end{quote}
+\fi
+\end{Detail}
+
+\BigGap
+\Entry
+\textbf{Java Technical Lead}
+\hfill
+\DatestampY{2005} -- 
+\DatestampY{2010}
+
+Paychex, Inc.
+\begin{Detail}
+\BulletItem
+As one of the technical leads for Java, developers on the extended team would come to me when they had deep technical questions about their code or odd errors that they couldn't track down. I would also have conversations with experienced developers to determine the ``best'' solution for a problem that would meet given technical or scheduling constraints.
+\BulletItem
+The department I was in created training exercises for new developers to introduce them to the tools and development environment. I worked with each new developer to review their answers to the Java exercises,  answer questions as they worked through them, and working through topics new to them.
+\BulletItem
+I gave quarterly presentations to the extended team to introduce Java technologies and internal systems and. Some topics covered were our team's web application redesigns and underlying functionality, Java JSP and servlet development, and web testing techniques.
+\end{Detail}
+
+\BigGap
+\Entry
+\textbf{Java Team Lead}
+\hfill
+\DatestampY{2005} -- 
+\DatestampY{2010}
+
+Paychex, Inc.
+\begin{Detail}
+\Item
+As a Java team lead, I was responsible for a small team of developers. As this was the first job after college for some, as we reviewed their code I would see opportunities to mentor them on advanced Java and JavaScript concepts and topics.
+\end{Detail}
+
+%%%%%%%%%%%%
+%% AWARDS %%
+%%%%%%%%%%%%
+
+\Section
+{Awards}
+{Awards}
+{PDF:Awards}
+
+\textbf{AppDynamics Scale Award}, AppSphere 2015
+\hfill
+\DatestampYM{2015}{11}
+\begin{Detail}
+Awarded to the company that was able to quickly deploy the AppDynamics tool across the most complex environment. Our team deployed the AppDynamics tool to over 2,000 JBoss, WebLogic, and Windows IIS servers across production and non-production environments.
+\end{Detail}
+
+%%%%%%%%%%%%%%%%%%
+%% PUBLICATIONS %%
+%%%%%%%%%%%%%%%%%%
+
+%%%%%%%
+%%% KEEP THIS SECTION???
+%%%%%%%
+\Section
+{Publications}
+{Publications}
+{PDF:Publications}
+
+\SubSection
+{Technical Editor}
+{Technical Editor}
+{PDF:TechnicalEditor}
+
+%% MLA format
+\Entry
+\href{https://www.amazon.com/Oracle-Certified-Associate-ProgrammerStudy/dp/1849687323}
+{Reece, Richard M. \textit{Oracle Certified Associate, Java SE 7 Programmer Study Guide}, Packt Publishing, 2012}
+
+\Gap
+\Entry
+\href
+{https://www.amazon.com/Java-Concurrency-Cookbook-FernandezJavier/dp/1849687889}
+{González, Javier Fernández. \textit{Java 7 Concurrency Cookbook}, Packt Publishing, 2012}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% OTHER ACTIVITIES %%
+%%%%%%%%%%%%%%%%%%%%%%
+\Section
+{Other Activities}
+{Other Activities}
+{PDF:OtherActivities}
+
+\Entry
+\textbf{Boy Scout and Cub Scout Leader}
+\hfill
+\DatestampY{2007} -- Present
+
+\Entry
+\textbf{FAA Certified Private Pilot}
+\hfill
+\DatestampY{2000}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% THIS IS A SECTION WITH USAGE NOTES %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% COMMENT OUT USAGE EXAMPLES
+\iffalse
+\newpage
+% Declare a new group to limit the scope of \color to this section.
+\begingroup
+\color{red}
+
+\Section
+{This is a\newline
+Section\newline
+With\newline
+Usage Notes}
+{This is a Section With Usage Notes (For PDF Bookmark)}
+{PDF:ThisIsASectionWithUsageNotes:ForPDFLink}
+
+\SubSection
+{This is a SubSection}
+{This is a SubSection (For PDF Bookmark)}
+{PDF:ThisIsASubSection:ForPDFLink}
+
+\Gap
+\BulletItem
+Use \CodeCommand{Section\{a\}\{b\}\{c\}} and
+\CodeCommand{SubSection\{a\}\{b\}\{c\}}
+to create sections and subsections, where
+\Code{a} is the heading displayed on the page,
+\Code{b} is the PDF bookmark heading, and
+\Code{c} is the internal PDF link (must be unique).
+Sections and subsections will appear in the PDF bookmarks.
+Note the CamelCase command names.
+
+\Gap
+\BulletItem
+Use
+\CodeCommand{Entry},
+\CodeCommand{BulletItem},
+\CodeCommand{SubBulletItem},
+\CodeCommand{Item},
+\CodeCommand{SubItem},
+\CodeCommand{NumberedItem},
+etc.,
+to create entries in the main body of the CV.
+
+\Gap
+\BulletItem
+Enclose entry details between
+\CodeCommand{begin\{Detail\}} and
+\CodeCommand{end\{Detail\}}
+so that they are typeset in a smaller font.
+\begin{Detail}
+\Item
+This is an example of entry detail text enclosed in a \Code{Detail} environment.
+\end{Detail}
+
+\Gap
+\BulletItem
+Use \CodeCommand{Gap} and \CodeCommand{BigGap} to insert vertical spaces between entries to improve layout.
+
+\BigGap
+\SubSection
+{This is Another SubSection}
+{This is Another Subsection (For PDF Bookmark)}
+{PDF:ThisIsAnotherSubSection:ForPDFLink}
+
+\Gap
+\Entry
+This is a plain \CodeCommand{Entry},
+followed by an \CodeCommand{hfill} and a date range
+\hfill
+\DatestampYM{2015}{10} --
+\DatestampYM{2015}{12}
+
+\Gap
+\BulletItem
+This is a \CodeCommand{BulletItem}.
+\Item
+This is an \CodeCommand{Item}, which has no bullet.
+Note the alignment with the \CodeCommand{BulletItem} above.
+
+\Gap
+\SubBulletItem
+This is a \CodeCommand{SubBulletItem}.
+\SubItem
+This is a \CodeCommand{SubItem}, which has no bullet.
+Note the alignment with the \CodeCommand{SubBulletItem} above.
+
+\Gap
+\NumberedItem{[42]}
+This is a \CodeCommand{NumberedItem}.
+Change the value of the macro \CodeCommand{MaxNumberedItem} to adjust the indentation width.
+
+\BigGap
+\SubSection
+{Line, Paragraph, and Page Breaks}
+{Line, Paragraph, and Page Breaks (For PDF Bookmark)}
+{PDF:LineParagraphAndPageBreaks:ForPDFLink}
+
+\Gap
+\BulletItem
+To create a new line within the same paragraph (i.e., preserving the same paragraph indentation), use \CodeCommand{newline} instead of \CodeCommand{\textbackslash};
+the latter will reset the paragraph indentation.
+
+\Gap
+\BulletItem
+To create a new paragraph, use \CodeCommand{par} or simply leave an empty line.
+Paragraph indentations (from
+\CodeCommand{Entry},
+\CodeCommand{BulletItem},
+\CodeCommand{SubBulletItem},
+\CodeCommand{Item},
+\CodeCommand{SubItem},
+\CodeCommand{NumberedItem},
+etc.) do not carry across different paragraphs.
+
+\Gap
+\BulletItem
+To create a new page, use \CodeCommand{newpage}.
+
+\BigGap
+\SubSection
+{Dates}
+{Dates (For PDF Bookmark)}
+{PDF:Dates:ForPDFLink}
+
+\Gap
+\BulletItem
+Use the following macros to specify and display dates consistently:
+\SubBulletItem
+\CodeCommand{DatestampYMD\{yyyy\}\{MM\}\{dd\}}
+(e.g., \CodeCommand{DatestampYMD\{2008\}\{01\}\{15\}})
+\SubBulletItem
+\CodeCommand{DatestampYM\{yyyy\}\{MM\}}
+(e.g., \CodeCommand{DatestampYM\{2008\}\{01\}})
+\SubBulletItem
+\CodeCommand{DatestampY\{yyyy\}}
+(e.g., \CodeCommand{DatestampY\{2008\}})
+
+\Gap
+\BulletItem
+Change the date format option passed to the document class to adjust how dates are displayed throughout the document:
+\SubBulletItem
+\Code{MMMyyyy} (``Jan~2008'')
+\SubBulletItem
+\Code{ddMMMyyyy} (``15~Jan~2008'')
+\SubBulletItem
+\Code{MMMMyyyy} (``January~2008'')
+\SubBulletItem
+\Code{ddMMMMyyyy} (``15~January~2008'')
+\SubBulletItem
+\Code{yyyyMMdd} (``2008-01-15'')
+\SubBulletItem
+\Code{yyyyMM} (``2008-01'')
+\SubBulletItem
+\Code{yyyy} (``2008'')
+
+\endgroup
+
+%%% COMMENT OUT USAGE EXAMPLES
+\fi
+
+\end{Body}
+
+%%%%%%%%%%%
+% CV NOTE %
+%%%%%%%%%%%
+
+\UseNoteFont%
+\null\hfill%
+[\textit{\CVNote}]
+\end{document}
