@@ -209,8 +209,8 @@ BoldItalicFont=FreeSerifBoldItalic]
 \setlength{\parskip}{0in} % No vertical space between paragraphs.
 
 % Avoid bad page breaks within paragraphs.
-\widowpenalties 1 10000
-\clubpenalties 1 10000
+\widowpenalties 1 500
+\clubpenalties 1 500
 \raggedbottom
 
 % Avoid overfull lines.
