@@ -23,9 +23,9 @@
 
 % CV Info (to be customized).
 \newcommand{\CVAuthor}{Edward E Griebel Jr.}
-\newcommand{\CVTitle}{Ed Griebel's CV for Website}
-\newcommand{\CVNote}{CV compiled on {\today} for Website}
-\newcommand{\CVWebpage}{http://www.edgriebel.com/}
+\newcommand{\CVTitle}{Ed Griebel's CV}
+\newcommand{\CVNote}{CV compiled on {\today} for DigitalOcean}
+\newcommand{\CVWebpage}{https://www.edgriebel.com/}
 
 % PDF settings and properties.
 \hypersetup{
@@ -77,7 +77,7 @@ breaklinks}
 %%
 %% REPLACE WITH CELLPHONE 
 %%
-%% \,\SubBulletSymbol\, \textit{<cellphone>}
+%%\,\SubBulletSymbol\, <cellphone>
 \,\SubBulletSymbol\,
 \href{\CVWebpage}
 {\url{\CVWebpage}}
@@ -106,6 +106,26 @@ solutions and integrations.
 Work Experience}
 {Professional Work Experience}
 {PDF:ProfessionalWorkExperience}
+
+\Entry
+\href{http://ist.rit.edu/}
+{\textbf{Rochester Institute of Technology}}
+\hfill 
+Rochester, New York, USA
+
+%%\Gap
+%%\BulletItem
+Adjunct Professor
+\hfill
+\DatestampYM{2017}{08} --
+Present
+
+\begin{Detail}
+\BulletItem
+Instructor for Introduction to Java course (\textit{ISTE-120}) for the Fall 2017 semester.
+\end{Detail}
+
+\BigGap
 
 \Entry
 \href{http://www.paychex.com/}
@@ -261,6 +281,7 @@ Implemented processes and applications for position tracking for derivatives Hig
 Technologies: C, C++, Sybase, Excel VBA, ClearCase
 \end{Detail}
 
+\iffalse
 \BigGap
 \Entry
 \href{http://www.blackrock.com/}
@@ -279,11 +300,12 @@ Software Developer
 Developed systems in C and C++ for MBS (mortgage) bond, Treasury, and Repo trading desks
 \BulletItem
 Responsible for maintenance and monitoring of nightly trade and reconciliation process
-
 \Gap
 Technologies: C, C++, Sybase, tcl, ksh, Motif, X11
 \end{Detail}
+\fi
 
+\iffalse
 \BigGap
 \Entry
 \textbf{Prophet 21, Inc.}
@@ -303,6 +325,7 @@ Wrote and maintained features for point-of-sale systems targeted to retailers an
 \Gap
 Technologies: Sybase, ksh
 \end{Detail}
+\fi
 
 %%%%%%%%%%%%%%%
 %% EDUCATION %%
@@ -321,9 +344,11 @@ Technologies: Sybase, ksh
 %%\Gap
 %%\BulletItem
 B.S. in Computer Engineering
+\iffalse
 \hfill
 \DatestampYM{1988}{09} --
 \DatestampYM{1992}{06}
+\fi
 \begin{Detail}
 \BulletItem
 Senior design project creating reference implementation of DHCP protocol for RFCs 1531 and 1534
@@ -367,6 +392,18 @@ This individual also has experience using AppDynamics APIs to extend and customi
 {PDF:PresentationAndMentoringExperience}
 
 \Entry
+\textbf{Adjunct Lecturer}
+\hfill
+Fall 2017
+
+Rochester Institute of Technology
+\begin{Detail}
+\Item
+Lecturer for a class of 30 undergraduate and graduate students for the course ISTE-120, an introduction to Java course for Information Science and Technology majors.
+\end{Detail}
+
+\BigGap
+\Entry
 \textbf{Summer Co-Op Mentor}
 \hfill
 Summer 2015
@@ -398,7 +435,7 @@ Service Intelligence enables your organization to apply analytics and decision-m
 
 \BigGap
 \Entry
-\textbf{Java Technical Lead}
+\textbf{Java Technical Lead and Team Lead}
 \hfill
 \DatestampY{2005} -- 
 \DatestampY{2010}
@@ -410,19 +447,8 @@ As one of the technical leads for Java, developers on the extended team would co
 \BulletItem
 The department I was in created training exercises for new developers to introduce them to the tools and development environment. I worked with each new developer to review their answers to the Java exercises,  answer questions as they worked through them, and working through topics new to them.
 \BulletItem
-I gave quarterly presentations to the extended team to introduce Java technologies and internal systems and. Some topics covered were our team's web application redesigns and underlying functionality, Java JSP and servlet development, and web testing techniques.
-\end{Detail}
-
-\BigGap
-\Entry
-\textbf{Java Team Lead}
-\hfill
-\DatestampY{2005} -- 
-\DatestampY{2010}
-
-Paychex, Inc.
-\begin{Detail}
-\Item
+I gave quarterly presentations to the extended team to introduce Java technologies and internal systems. Topics included web application redesigns and base functionality, Java JSP and servlet development, and web testing techniques.
+\BulletItem
 As a Java team lead, I was responsible for a small team of developers. Since this was the first job after college for some, as we reviewed their code I would see opportunities to mentor them on advanced Java and JavaScript concepts and topics.
 \end{Detail}
 
@@ -468,7 +494,7 @@ Awarded to the company that was able to quickly deploy the AppDynamics tool acro
 \Entry
 \href
 {https://www.amazon.com/Java-Concurrency-Cookbook-FernandezJavier/dp/1849687889}
-{González, Javier Fernández. \textit{Java 7 Concurrency Cookbook}, Packt Publishing, 2012}
+{Gonzalez, Javier Fernandez. \textit{Java 7 Concurrency Cookbook}, Packt Publishing, 2012}
 
 %%%%%%%%%%%%%%%%%%%%%%
 %% OTHER ACTIVITIES %%
@@ -661,3 +687,4 @@ Change the date format option passed to the document class to adjust how dates a
 \null\hfill%
 [\textit{\CVNote}]
 \end{document}
+
