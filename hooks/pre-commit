@@ -1,11 +1,13 @@
 #!/bin/sh
 #
-# An example hook script to verify what is about to be committed.
-# Called by "git commit" with no arguments.  The hook should
-# exit with non-zero status after issuing an appropriate message if
-# it wants to stop the commit.
+# Hook script to prevent self-doxxing by looking for phone number
+# and address.
+# As it relies on regex it's probably going to find false positives
 #
-# To enable this hook, rename this file to "pre-commit".
+# ToDo: Trap only on "real" files and not index IDs, etc.
+# 
+# To use: Copy to .git/hooks/pre-commit
+#
 
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
@@ -18,14 +20,18 @@ fi
 # Redirect output to stderr.
 exec 1>&2
 
-PHONE=`git diff --cached $against | grep -E '[0-9]{3}.{0,2}[0-9]{3}.?[0-9]{4}'`
+PHONE=`git diff --cached $against *.tex| grep -E '[0-9]{3}.{0,2}[0-9]{3}.?[0-9]{4}'`
+ADDR=`git diff --cached $against *.tex| grep -E '[0-9]{1,5} [a-zA-Z]{2,14} [a-zA-Z]{1,8}'`
 
-if [ "$PHONE" ]
-then
-	cat <<\EOF
-Error: Phone number not allowed in checkin
+if [ "$PHONE" ] ; then
+	echo Error: Phone number not allowed in checkin
+	echo Error: $PHONE
+	exit 1
+fi
 
-EOF
+if [ "$ADDR" ] ; then
+	echo Error: Address number not allowed in checkin
+	echo Error: $ADDR
 	exit 1
 fi
 
