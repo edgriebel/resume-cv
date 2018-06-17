@@ -168,13 +168,13 @@ BoldItalicFont=FreeSerifBoldItalic]
 
 % Font styles.
 \newcommand{\UseHeadingFont}{\normalfont}
-\newcommand{\UseHeaderFooterFont}{\UseHeadingFont\fontsize{9.2pt}{10.5pt}\selectfont}
-\newcommand{\UseNoteFont}{\UseHeadingFont\fontsize{9pt}{10.6pt}\selectfont}
+\newcommand{\UseHeaderFooterFont}{\UseHeadingFont\fontsize{10pt}{12pt}\selectfont}
+\newcommand{\UseNoteFont}{\UseHeadingFont\fontsize{10pt}{12pt}\selectfont}
 \newcommand{\UseTitleFont}{\UseHeadingFont\fontsize{28pt}{33.6pt}\selectfont\bfseries}
-\newcommand{\UseSubTitleFont}{\normalfont\fontsize{9.6pt}{11.3pt}\selectfont}
-\newcommand{\UseSectionFont}{\UseHeadingFont\fontsize{9pt}{11pt}\selectfont\bfseries}
-\newcommand{\UseSubSectionFont}{\UseHeadingFont\fontsize{9.6pt}{11.3pt}\selectfont\bfseries}
-\newcommand{\UseDetailFont}{\normalfont\fontsize{9.6pt}{11.3pt}\selectfont}
+\newcommand{\UseSubTitleFont}{\normalfont\fontsize{10pt}{12pt}\selectfont}
+\newcommand{\UseSectionFont}{\UseHeadingFont\fontsize{10pt}{12pt}\selectfont\bfseries}
+\newcommand{\UseSubSectionFont}{\UseHeadingFont\fontsize{10pt}{12pt}\selectfont\bfseries}
+\newcommand{\UseDetailFont}{\normalfont\fontsize{10pt}{12pt}\selectfont}
 
 % Symbols (unicode).
 \newcommand{\BulletSymbol}{{\normalfont\fontsize{7.5}{8.8}\selectfont\raisebox{0.17em}{\char"25A0}}}
