@@ -172,7 +172,7 @@ BoldItalicFont=FreeSerifBoldItalic]
 \newcommand{\UseNoteFont}{\UseHeadingFont\fontsize{10pt}{12pt}\selectfont}
 \newcommand{\UseTitleFont}{\UseHeadingFont\fontsize{28pt}{33.6pt}\selectfont\bfseries}
 \newcommand{\UseSubTitleFont}{\normalfont\fontsize{10pt}{12pt}\selectfont}
-\newcommand{\UseSectionFont}{\UseHeadingFont\fontsize{10pt}{12pt}\selectfont\bfseries}
+\newcommand{\UseSectionFont}{\UseHeadingFont\fontsize{9pt}{10.8pt}\selectfont\bfseries}
 \newcommand{\UseSubSectionFont}{\UseHeadingFont\fontsize{10pt}{12pt}\selectfont\bfseries}
 \newcommand{\UseDetailFont}{\normalfont\fontsize{10pt}{12pt}\selectfont}
 
