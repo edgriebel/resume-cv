@@ -22,9 +22,20 @@ Template for a simple resume or curriculum vitae (CV), in XeLaTeX.
 
 ## Overview
 
-The main XeLaTeX source file is `CV.tex`; the compiled document is `CV.pdf`.
+The main XeLaTeX source file is `Ed_Griebel_CV.tex`; the compiled document is `Ed_Griebel_CV.pdf`.
 
 Instructions for compiling the document (TeX &rarr;(XeLaTeX)&rarr; PDF):
+
+- **Method 0:** On Windows:
+	- install MiKTeX: <https://miktex.org/howto/install-miktex>. 
+		- This installs TexWorks also.
+		- This installs necessary TeX apps, libraries, and fonts specified in doc and also works well with proxies (set up in MiKTeX Console)
+		- I have found this works better than installing xelatex and latexmk in Cygwin
+	- Open `Ed_Griebel_CV.tex`
+	- Select `XeLaTeX` from drop-down
+	- Click play button on left
+		- Note that this takes a long time the first time it's run and appears to be stuck loading `tex/latex/base/size10.clo`
+	- Run a second time to update the page numbers at the bottom of each page
 
 - **Method 1:** Use `latexmk` for fully automated document generation:
 	- `latexmk -xelatex "CV.tex"`
