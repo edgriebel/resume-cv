@@ -45,6 +45,12 @@ Instructions for compiling the document (TeX &rarr;(XeLaTeX)&rarr; PDF):
 	- `xelatex "CV.tex"`
 	(run multiple times to resolve cross-references if needed)
 
+- **Method 3:** Use `XeLaTeX` via docker container:
+	- install docker
+	- `docker build -t texlive .`
+	- `docker run -v <this directory>:/data/resume-cv --rm texlive`
+	- Look for `Ed_Griebel_CV.pdf`
+
 ## License
 
 This is free and unencumbered software released into the public domain.
