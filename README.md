@@ -1,26 +1,17 @@
-simple-resume-cv
-================
+# Who Am I?
 
-Template for a simple resume or curriculum vitae (CV), in XeLaTeX.
+Full Stack Developer with over 20 years of success creating software solutions.
+Wide breadth of experience in multiple industries, languages, tools, and third-party applications demonstrates success.
+Excitement about creating code to deliver high quality useful software results in systems that support business growth.
 
-**Compiled sample document:**<br>
-[CV.pdf](https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/CV.pdf)
+Resume: [Ed_Griebel_CV.pdf](https://raw.githubusercontent.com/edgriebel/resume-cv/master/Ed_Griebel_CV.pdf)
 
-**Sample pages (click to enlarge):**
+# Creating the resume:
 
-<img height="500" src="https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/Miscellaneous/CV-01.png" alt="CV-01">
-<img height="500" src="https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/Miscellaneous/CV-02.png" alt="CV-02">
-<img height="500" src="https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/Miscellaneous/CV-03.png" alt="CV-03">
+My resume is written in LaTeX, this lets me use simple diff commands to compare versions.
+I can also store different versions or notes to myself in the comments in the `.tex` file.
 
-## Main Features
-
-- Simple template that can be further customized or extended.
-- Template document contains numerous examples.
-- Direct support for TrueType (TTF) and OpenType (OTF) fonts.
-- Direct support for multilingual Unicode characters, with the appropriate fonts.
-- Hyperlinks can be included in generated PDF.
-
-## Overview
+## How to Build
 
 The main XeLaTeX source file is `Ed_Griebel_CV.tex`; the compiled document is `Ed_Griebel_CV.pdf`.
 
@@ -49,9 +40,32 @@ Instructions for compiling the document (TeX &rarr;(XeLaTeX)&rarr; PDF):
 	- install docker
 	- `docker build -t texlive .`
 	- `docker run -v <this directory>:/data/resume-cv --rm texlive`
+		- This updates the images displayed in this README also (in Miscellaneous directory)
 	- Look for `Ed_Griebel_CV.pdf`
 
-## License
+Based on: simple-resume-cv
+================
+
+Template for a simple resume or curriculum vitae (CV), in XeLaTeX.
+
+**Compiled sample document:**<br>
+[CV.pdf](https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/CV.pdf)
+
+**Sample pages (click to enlarge):**
+
+<img height="500" src="https://raw.githubusercontent.com/edgriebel/resume-cv/master/Miscellaneous/Ed_Griebel_CV-0.png" alt="CV-0">
+<img height="500" src="https://raw.githubusercontent.com/edgriebel/resume-cv/master/Miscellaneous/Ed_Griebel_CV-1.png" alt="CV-1">
+<img height="500" src="https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/Miscellaneous/CV-03.png" alt="summary">
+
+## Main Features
+
+- Simple template that can be further customized or extended.
+- Template document contains numerous examples.
+- Direct support for TrueType (TTF) and OpenType (OTF) fonts.
+- Direct support for multilingual Unicode characters, with the appropriate fonts.
+- Hyperlinks can be included in generated PDF.
+
+### License
 
 This is free and unencumbered software released into the public domain.
 For more information, please see the file `LICENSE` or refer to <http://unlicense.org>.
