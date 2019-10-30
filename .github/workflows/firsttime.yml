@@ -5,7 +5,8 @@ on: [push]
 jobs:
   build:
 
-    runs-on: blang/latex:ubuntu
+    runs-on: ubuntu 
+    # blang/latex:ubuntu
 
     steps:
     - uses: actions/checkout@v1
@@ -17,5 +18,5 @@ jobs:
         echo test, and deploy your project.
     - name: What's there?
       run: ls -la
-    - name: Test xelatex
-      run: latexmk -xelatex Ed_Griebel_CV.tex
+      #- name: Test xelatex
+      #run: latexmk -xelatex Ed_Griebel_CV.tex
