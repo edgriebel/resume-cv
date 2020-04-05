@@ -29,17 +29,17 @@ Instructions for compiling the document (TeX &rarr;(XeLaTeX)&rarr; PDF):
 	- Run a second time to update the page numbers at the bottom of each page
 
 - **Method 1:** Use `latexmk` for fully automated document generation:
-	- `latexmk -xelatex "CV.tex"`
+	- `latexmk -xelatex "Ed_Griebel_CV.tex"`
 	(add the `-pvc` switch to automatically recompile on changes)
 
 - **Method 2:** Use `XeLaTeX` directly:
-	- `xelatex "CV.tex"`
+	- `xelatex "Ed_Griebel_CV.tex"`
 	(run multiple times to resolve cross-references if needed)
 
 - **Method 3:** Use `XeLaTeX` via docker container:
 	- install docker
-	- `docker build -t texlive .`
-	- `docker run -v <this directory>:/data/resume-cv --rm texlive`
+	- `docker build -t tinytex .`
+	- `docker run -v `pwd`:`pwd` -w `pwd` --rm tinytex make`
 		- This updates the images displayed in this README also (in Miscellaneous directory)
 	- Look for `Ed_Griebel_CV.pdf`
 
@@ -53,8 +53,8 @@ Template for a simple resume or curriculum vitae (CV), in XeLaTeX.
 
 **Sample pages (click to enlarge):**
 
-<img height="500" src="https://raw.githubusercontent.com/edgriebel/resume-cv/master/Miscellaneous/Ed_Griebel_CV-0.png" alt="CV-0">
 <img height="500" src="https://raw.githubusercontent.com/edgriebel/resume-cv/master/Miscellaneous/Ed_Griebel_CV-1.png" alt="CV-1">
+<img height="500" src="https://raw.githubusercontent.com/edgriebel/resume-cv/master/Miscellaneous/Ed_Griebel_CV-2.png" alt="CV-2">
 <img height="500" src="https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/Miscellaneous/CV-03.png" alt="summary">
 
 ## Main Features
