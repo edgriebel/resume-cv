@@ -16,6 +16,17 @@ I can also store different versions or notes to myself in the comments in the `.
 The main XeLaTeX source file is `Ed_Griebel_CV.tex`; the compiled document is `Ed_Griebel_CV.pdf`.
 
 Instructions for compiling the document (TeX &rarr;(XeLaTeX)&rarr; PDF):
+- **Preferred Method:
+	- Install Docker
+		- MacOS: `brew install --cask docker`
+	- Run Docker container to create PDF
+		- `docker run -v $PWD:/data --rm edgriebel/tinytex-xelatex /bin/bash -c 'cd data; make'`
+	- Build new docker image as needed
+		- `docker build -t tinytex-xelatex`
+		- log into docker: `docker login --username=yourhubusername --email=youremail@company.com`
+		- tag the image
+		- Push to docker hub: `docker push yourhubusername/repo-name`
+
 
 - **Method 0:** On Windows:
 	- install MiKTeX: <https://miktex.org/howto/install-miktex>. 
