@@ -1,6 +1,6 @@
 DOC=Ed_Griebel_CV
 
-all: $(DOC).pdf images
+all: clean $(DOC).pdf images
 
 %.pdf: %.tex
 	latexmk -xelatex $?
