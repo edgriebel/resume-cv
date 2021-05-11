@@ -24,8 +24,9 @@
 % CV Info (to be customized).
 \newcommand{\CVAuthor}{Edward E Griebel Jr.}
 \newcommand{\CVTitle}{Ed Griebel CV}
-\newcommand{\CVNote}{CV written in \LaTeX, compiled on {\today}}
+\newcommand{\CVNote}{Resume written in \LaTeX, compiled on {\today}}
 \newcommand{\CVWebpage}{https://www.edgriebel.com/}
+\newcommand{\CVWebpageDisp}{www.edgriebel.com}
 
 % PDF settings and properties.
 \hypersetup{
@@ -49,6 +50,12 @@ breaklinks}
 \newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
 \newcommand{\comment}[1]{\ignorespaces} %% https://tex.stackexchange.com/a/276698/143811
 
+\newif\ifLOCATION
+\newif\ifLONG
+
+
+\LOCATIONfalse
+\LONGfalse
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ACTUAL DOCUMENT.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -81,27 +88,28 @@ breaklinks}
 \,\SubBulletSymbol\, 585-705-1093
 \,\SubBulletSymbol\,
 \href{\CVWebpage}
-{\url{\CVWebpage}}
+{\url{\CVWebpageDisp}}
 
-\href{https://github.com/edgriebel}{https://github.com/edgriebel}
+\href{https://github.com/edgriebel}{github.com/edgriebel}
 \,\SubBulletSymbol\,
-\href{https://www.linkedin.com/in/edgriebel}{https://linkedin.com/in/edgriebel}
+\href{https://www.linkedin.com/in/edgriebel}{linkedin.com/in/edgriebel}
 \end{SubTitle}
 
 \begin{Body}
 \Section{Summary}{Summary}{PDF:Summary}
-
 Language-Agnostic Full Stack Developer with over 20 years of success creating software solutions.
 Wide breadth of experience in multiple industries, languages, tools, and third-party applications demonstrates success.
-Excitement about creating code to deliver high quality systems that support business growth.
+Excited to create code to deliver high quality systems that support business growth.
 \iffalse
 \Entry
-Full Stack Java architect, developer, and consultant, specializing in Java/Oracle/JavaScript
+Full Stack/Backend Java architect, developer, and consultant, specializing in Java/Oracle/JavaScript
 solutions and integrations.
+\fi
 \Gap
-\textit{Technical Specialties}: Java, J2EE/JavaEE, SQL, PL/SQL, JavaScript, CSS, JMS, jQuery, jQuery UI, RabbitMQ, Oracle, Cognos, JBoss, WebLogic, AppDynamics.
+Selected expertise: Java, Python, J2EE/JavaEE, MySQL, SQL, PL/SQL, JavaScript, JMS, RabbitMQ, Cognos, AppDynamics.
+\iffalse
 \Gap
-\textit{Business Specialties}: Agile team leadership, customer-focused development, requirements gathering and analysis, technical liaison, systems integration, business intelligence
+\textit{Business Specialties}: Agile team leadership, customer-focused development, mentoring, requirements gathering and analysis, technical liaison, systems integration, business intelligence
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PROFESSIONAL WORK EXPERIENCE %%
@@ -113,32 +121,28 @@ Work Experience}
 {Professional Work Experience}
 {PDF:ProfessionalWorkExperience}
 \Entry
-\href{http://www.gocatalant.com}
-{\textbf{Catalant Technologies}}
+\href{https://www.marqeta.com}
+{\textbf{Marqeta Inc.}}
 \hfill
-\DatestampYM{2019}{06} -- \DatestampYM{2020}{03}
+\DatestampYM{2020}{05} -- Present
 
-Principal Software Engineer
+Lead Software Engineer
+\ifLOCATION
 \hfill
 Rochester, New York
-
-\begin{Detail}
-\iffalse
-Catalant helps companies accelerate growth, drive efficiency, and innovate rapidly with a SaaS platform that organizes work and dynamically matches people to opportunities. 
 \fi
 
+\begin{Detail}
 \BulletItem
-Determine performance issues impacting system scalability and work with technical owners for prioritization and resolution
+Work closely with peer developers, product owners, and operations teams to create a greenfield system to support a new credit card product including processing, accounting, statementing, and user-level APIs.
 \BulletItem
-Create and build consensus on engineering best practices to improve developer productivity and long-term supportability
+Collaborate on creating processes and procedures to support development and maintenance activities.
 \BulletItem
-Create new features for customers and tools to enhance developer productivity
-\BulletItem
-Mentor and guide junior developers in Catalant's development environment and general software engineering practices
+Mentor, guide, and be an example for other developers on the team for designs and general software engineering practices.
 
 
 \Gap
-Technologies: Python, Flask, JavaScript, MySQL, Bootstrap, Docker, Elasticsearch
+Technologies: Java, MySQL, Spring Boot, Docker, jOOQ
 
 \end{Detail}
 
@@ -154,12 +158,68 @@ Present
 %%\Gap
 %%\BulletItem
 Adjunct Professor
+\ifLOCATION
 \hfill 
 Rochester, New York
+\fi
 
 \begin{Detail}
 \BulletItem
-Lecturer for undergraduate courses in Java, DBMS/SQL, and Software Engineering in Industry
+Currently teaching 3-credit undergraduate course in professional software engineering practices.
+\BulletItem
+Previous courses taught include undergraduate courses in Java and DBMS/SQL.
+\end{Detail}
+
+\BigGap
+\BigGap
+
+\Entry
+\href{http://logicalopertions.com/}
+{\textbf{Logical Operations}}
+\hfill
+Occasionally since \DatestampYM{2020}{01}
+
+%%\Gap
+%%\BulletItem
+Consultant
+\ifLOCATION
+\hfill 
+Rochester, New York
+\fi
+
+\begin{Detail}
+\BulletItem
+Provide industry best practices and expertise for new courses in Machine Learning, Artificial Intelligence, and Data Science.
+\end{Detail}
+
+\BigGap
+
+\Entry
+\href{http://www.gocatalant.com}
+{\textbf{Catalant Technologies}}
+\hfill
+\DatestampYM{2019}{06} -- \DatestampYM{2020}{03}
+
+Principal Software Engineer
+\ifLOCATION
+\hfill
+Rochester, New York
+\fi
+
+\begin{Detail}
+\BulletItem
+Determined performance issues impacting Catalant's SaaS product stability/scalability and worked with technical managers, product owners, and engineering management for prioritization and resolution.
+\BulletItem
+Created, built consensus around, and implemented processes and procedures to improve developer productivity and long-term supportability of primary SaaS product. 
+\BulletItem
+Mentored and guided junior developers in industry best practices and product platform.
+\BulletItem
+Work with local and remote product owners, leads, and developers to create features and fix defects.
+
+
+\Gap
+Technologies: Python, Flask, JavaScript, Bootstrap, MySQL, Docker, Elasticsearch
+
 \end{Detail}
 
 \BigGap
@@ -171,28 +231,30 @@ Lecturer for undergraduate courses in Java, DBMS/SQL, and Software Engineering i
 \DatestampYM{2013}{06} -- \DatestampYM{2019}{06}
 
 Middleware Architect %% Crappy Name!!
+\ifLOCATION
 \hfill
 Rochester, New York
+\fi
 
 \begin{Detail}
 \iffalse
-At Paychex I work with cross-functional teams to build: an inventory system to track hosts, managed VMs, databases, and middleware appliances; machine learning systems to efficiently repack databases and to predict system utilization based on user metrics; a ground-up implementation of the Netflix Chaos Monkey; implemented AppDynamics on over 20,000 JVMs; and a system to collect and monitor JVM metrics and send alerts via SNMP and SMTP.
+At Paychex I worked with cross-functional teams to build: an inventory system to track hosts, managed VMs, databases, and middleware appliances; machine learning systems to efficiently repack databases and to predict system utilization based on user metrics; a ground-up implementation of the Netflix Chaos Monkey; implemented AppDynamics on over 20,000 JVMs; and a system to collect and monitor JVM metrics and send alerts via SNMP and SMTP.
 \fi
 
 \BulletItem
-Created system to rebalance 20,000 databases among 200 pools in Azure cloud using algorithmic, statistical, and machine learning techniques with TensorFlow, Pandas, NumPy, Jupyter, and scikit-learn in a Python pipeline.
+Created system in Python to rebalance 20,000 databases among 200 Azure cloud pools with algorithmic, statistical, and machine learning techniques using TensorFlow, Pandas, and scikit-learn.
 
 \BulletItem
-Built IT inventory system that provides a single source of truth for virtualized and physical hosts, JVMs, CLRs, databases, and middleware infrastructure with a HTML5 webapp and REST front-end. Relationships were sourced from external systems including AppDynamics, Puppet/Facter, ServiceNow, and Oracle OEM with a custom export to ServiceNow’s CMDB. 
+Built internal inventory system with web and REST APIs providing a single source of truth for virtualized and physical hosts, JVMs, CLRs, databases, and middleware. Relationships sourced from external management systems including AppDynamics, Puppet/Facter, ServiceNow, and Oracle.
 
 \BulletItem
-Custom Chaos Monkey randomly kills LDAP and SiteMinder middleware processes, and Java microservices daily in production and non-production environments. The Chaos Monkey is monitored and controlled by a Spring Boot web application and Splunk dashboard.
+Created custom Chaos Monkey implementation using Spring Boot and Splunk to randomly kill middleware appliances and Java processes daily in multiple environments.
 
 \BulletItem
-Implemented AppDynamics on over 20,000 JVMs to replace our custom built system that collected and monitored JVM metrics and send alerts via SNMP and SMTP.
+Implemented AppDynamics on over 20,000 JVMs to replace a custom built system that collected and monitored JVM metrics, saving four FTEs annually.
 
 \Gap
-Technologies: Java, JavaScript, JQuery-UI, Oracle PL/SQL, Scikit-Learn, TensorFlow, Python, middleware, AppDynamics, Application Performance Monitoring, ClearCase, Ant, Git, JUnit, Vagrant
+Technologies: Java, JavaScript, Oracle PL/SQL, Scikit-Learn, Python, Jupyter, AppDynamics, Application Performance Monitoring (APM), Vagrant
 \end{Detail}
 
 \BigGap
@@ -201,8 +263,10 @@ Technologies: Java, JavaScript, JQuery-UI, Oracle PL/SQL, Scikit-Learn, TensorFl
 \Entry
 \href{http://www.paychex.com/}
 {\textbf{Paychex}}
+\ifLOCATION
 \hfill 
 Rochester, New York
+\fi
 
 %%\Gap
 %%\BulletItem
@@ -219,9 +283,7 @@ Created an internal IT Inventory system in HTML5/JavaScript/Java/RabbitMQ to pro
 \BulletItem
 Lead developer on system to gather and present metrics from hosts, JVMs, and middleware components, used to send alerts for problems and provide a single location to view runtime metrics.
 \BulletItem
-Created tools
-in Python to automate configuration and installation of AppDynamics on thousands of Weblogic servers using Weblogic WLST
-scripting tool.
+Created tools in Python to automate configuration and installation of AppDynamics on thousands of Weblogic servers using Weblogic WLST scripting tool.
 \BulletItem
 Member of cross-functional team for selection, prototyping, and implementation of AppDynamics application monitoring tool. 
 
@@ -235,25 +297,32 @@ Technologies: Java, JavaScript, JQuery-UI, Oracle PL/SQL, Scikit-Learn, TensorFl
 \Entry
 \textbf{Axeda} (division of PTC)
 \hfill 
-\DatestampYM{2010}{06} --  \DatestampYM{2013}{06}
+%% \DatestampYM{2010}{06} --  \DatestampYM{2013}{06}
+\DatestampY{2010} --  \DatestampY{2013}
 
 %%\Gap
 %%\BulletItem
-Senior Software Engineer, R\&D
+Senior Software Engineer
+\ifLOCATION
 \hfill
 Rochester, New York
+\fi
 
 \begin{Detail}
 \BulletItem
-Full stack Java/Oracle/ActiveMQ JMS developer for IoT system.
+Fullstack Java/Oracle/Groovy/ActiveMQ JMS developer for IoT system. 
 \BulletItem
-Lead for Cognos Business Intelligence integration with IoT data. Integrated Groovy with Cognos to script report creation, execution, publishing, and administration.
+Owned the integration, performance tuning, and upgrade of Cognos Business Intelligence module.
 \BulletItem
-Internal consulting for new and existing solutions for professional services and product management teams.
+Internal technical consultant for professional services and product management teams.
 
 \Gap
-Technologies: Java, JavaScript, JBoss, Oracle PL/SQL, Hudson/Jenkins, JUnit, Cognos, Business Intelligence, Maven, SVN
+Technologies: Java, JavaScript, Oracle PL/SQL, Hudson/Jenkins, Cognos, Business Intelligence
 \end{Detail}
+
+\ifLONG
+%% \BigGap
+%% \textbf{******** LONG FORM TEST **********}
 
 \BigGap
 \Entry
@@ -266,19 +335,25 @@ Technologies: Java, JavaScript, JBoss, Oracle PL/SQL, Hudson/Jenkins, JUnit, Cog
 %%\Gap
 %%\BulletItem
 Lead Developer
+\ifLOCATION
 \hfill
 Rochester, New York
+\fi
 
 \begin{Detail}
 \BulletItem
-Lead team converting two existing external Java/JSP/Oracle applications to Web 2.0 and creating new external application from existing internal-only functions. Leveraged Hudson for Continuous Integration and automated turnover to QA.
+Lead team of five to create Java/JavaScript front end and webapp for an existing internal fat client, and upgraded two existing web applications to contemporary standards. Used Hudson to create a CI/CD pipeline for Dev and QA deployments.
+
 \BulletItem
-Mentored new developers, delivered technical training, and provided answers to challenging technical questions for development team.
+Mentored new developers and delivered technical training.
+%% 2021-05-02 TMI
+\iffalse
 \BulletItem
 Member of architecture team to research and set five-year strategy for web application strategy.
+\fi
 
 \Gap
-Technologies: Java, JavaScript, JSP, Struts, WebLogic, Oracle PL/SQL, Hudson/Jenkins, JUnit, ClearCase
+Technologies: Java, JavaScript, JSP, Struts, WebLogic, Oracle PL/SQL, Hudson/Jenkins 
 \end{Detail}
 
 \BigGap
@@ -292,13 +367,15 @@ Technologies: Java, JavaScript, JSP, Struts, WebLogic, Oracle PL/SQL, Hudson/Jen
 %%\Gap
 %%\BulletItem
 Senior Software Developer
+\ifLOCATION
 \hfill
 Rochester, New York
+\fi
 
 \begin{Detail}
 \Item
-Created Java applications to build DSL circuits and track commissions\comment{; CruiseControl used for Continuous Integration}. 
-Automated generation of \comment{20} Excel spreadsheets from Hyperion EssBase saving two FTEs weekly.
+Created Java applications to build DSL circuits and track sales commissions\comment{; CruiseControl used for Continuous Integration}. 
+Automated generation of \comment{20} Excel spreadsheets from Hyperion EssBase saving \$200,000 annually (two FTEs).
 
 %% \Gap
 %% Technologies: Java, JSP, Struts, Oracle PL/SQL, Continuous Integration, JUnit, Excel VBA, EssBase Data Warehouse, Ant
@@ -315,8 +392,10 @@ Automated generation of \comment{20} Excel spreadsheets from Hyperion EssBase sa
 %%\Gap
 %%\BulletItem
 Senior/Lead Developer
+\ifLOCATION
 \hfill
 Rochester, New York
+\fi
 
 \begin{Detail}
 \Item
@@ -338,8 +417,10 @@ Lead multi-site teams to create Java and Perl CGI telecom applications.
 %%\Gap
 %%\BulletItem
 Lead Developer
+\ifLOCATION
 \hfill
 New York, New York
+\fi
 
 \begin{Detail}
 \Item
@@ -362,8 +443,10 @@ Created trading systems in C/C++ and tactical applications for equity derivative
 %%\Gap
 %%\BulletItem
 Software Developer
+\ifLOCATION
 \hfill
 New York, New York
+\fi
 
 \begin{Detail}
 \Item
@@ -395,7 +478,63 @@ Technologies: Sybase, ksh
 \end{Detail}
 \fi
 
+\else
+%% \BigGap
+%% \textbf{******** SHORT FORM TEST **********}
 
+\BigGap
+\Entry
+\href{http://www.paychex.com/}
+{\textbf{Paychex}}
+
+\begin{Detail}
+\BulletItem
+	Lead team of five to create three public-facing fullstack Java/JavaScript applications.
+	Created CI/CD deployment pipeline with Hudson.
+	Mentored new developers and delivered technical training.
+\end{Detail}
+
+\BigGap
+\Entry
+\href{http://www.frontier.com/}
+{\textbf{Frontier Communications}}
+
+\begin{Detail}
+\BulletItem
+Created Java applications to build DSL circuits and track sales commissions\comment{; CruiseControl used for Continuous Integration}.  Automated generation of \comment{20} Excel spreadsheets from Hyperion EssBase saving \$200,000 annually (two FTEs).
+\end{Detail}
+
+\BigGap
+\Entry
+\href{http://www.globalcrossing.com/}
+{\textbf{Global  Crossing} (division of Level3)}
+
+\begin{Detail}
+\BulletItem
+Lead multi-site teams to create Java and Perl CGI telecom applications.
+\end{Detail}
+
+\BigGap
+\Entry
+\href{http://www.jpmorganchase.com/}
+{\textbf{JP Morgan Chase}}
+\begin{Detail}
+\BulletItem
+Created trading systems in C/C++ and tactical applications for equity derivatives and HFT trading desks.
+\end{Detail}
+
+\BigGap
+\Entry
+\href{http://www.blackrock.com/}
+{\textbf{BlackRock Financial Management}}
+\begin{Detail}
+\BulletItem
+Developed systems in C/C++ for MBS mortgage, Treasury, and Repo trading desks.
+%%\Gap
+%%Technologies: C, C++, Sybase, tcl, ksh, Motif, X11
+\end{Detail}
+\fi %% xxx
+%
 %%%%%%%%%%%%%%%
 %% EDUCATION %%
 %%%%%%%%%%%%%%%
@@ -408,21 +547,22 @@ Technologies: Sybase, ksh
 \Entry
 \href{https://gatech.edu}
 {\textbf{Georgia Institute of Technology}}
-\hfill Atlanta, Georgia
 
 M.S. in Computer Science
 \hfill 
 \textit{Expected December 2022}
 
-\BulletItem
-Concentrations in Computing Systems and Machine Learning
+%% \BulletItem
+%% Concentrations in Computing Systems and Machine Learning
 
 \Gap
 
 \Entry
 \href{http://www.bucknell.edu/}
 {\textbf{Bucknell University}}
+\ifLOCATION
 \hfill Lewisburg, Pennsylvania
+\fi
 
 %%\Gap
 %%\BulletItem
@@ -457,17 +597,29 @@ Concentrations in Digital Electronics and Geology
 {\textbf{AppDynamics Certified Implementations Professional}}
 \hfill
 \DatestampYM{2016}{11}
+%% 2021-05-02 TMI, show cert only
+\iffalse
 \begin{Detail}
 \begin{quote}
 ``An individual who attains the AppDynamics Certified Implementation Professional certification has demonstrated that he or she possesses the minimum acceptable level of knowledge and skills required to deploy AppDynamics Controllers, Agents, EUM Servers and Analytics Servers. 
 This individual also has experience using AppDynamics APIs to extend and customize the AppDynamics platform.''
 \end{quote}
 \end{Detail}
+\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %% Lecture EXPERIENCE  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%% 2021-05-02 DELETE entire PRESENTATION SECTION 
+\newif\ifA
+\newif\ifB
+\newif\ifC
+\Afalse
+\Bfalse
+\Cfalse
+\ifA
 
 \Section
 {Presentations}%% and Mentoring Experience}
@@ -511,7 +663,7 @@ Axeda Connection Conference, Axeda, Inc.
 \begin{Detail}
 \Item
 Live presentation for Axeda customers to review and demonstrate new features added to the Cognos big data reporting product.
-\iffalse
+\ifB
 \Item
 From the conference program:
 \begin{quote}
@@ -520,7 +672,7 @@ Service Intelligence enables your organization to apply analytics and decision-m
 \fi
 \end{Detail}
 
-\iffalse      %% INCLUDE only for cv style
+\ifC      %% INCLUDE only for cv style
 \BigGap
 \Entry
 \textbf{Java Technical Lead and Team Lead}
@@ -540,6 +692,9 @@ I gave quarterly presentations to the extended team to introduce Java technologi
 As a Java team lead, I was responsible for a small team of developers. Since this was the first job after college for some, as we reviewed their code I would see opportunities to mentor them on advanced Java and JavaScript concepts and topics.
 \end{Detail}
 \fi      %% INCLUDE only for cv style
+
+\fi %% DELETE entire PRESENTATION SECTION 
+
 %%%%%%%%%%%%
 %% AWARDS %%
 %%%%%%%%%%%%
@@ -598,8 +753,8 @@ Awarded by AppDynamics to the company that was able to quickly deploy the AppDyn
 %% OTHER ACTIVITIES %%
 %%%%%%%%%%%%%%%%%%%%%%
 \Section
-{Other Activities}
-{Other Activities}
+{Activities}
+{Activities}
 {PDF:OtherActivities}
 
 \Entry
