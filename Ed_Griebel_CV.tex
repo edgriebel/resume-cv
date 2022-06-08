@@ -24,7 +24,7 @@
 % CV Info (to be customized).
 \newcommand{\CVAuthor}{Edward E Griebel Jr.}
 \newcommand{\CVTitle}{Ed Griebel CV}
-\newcommand{\CVNote}{Resume written in \LaTeX, compiled on {\today}}
+\newcommand{\CVNote}{Resume written in \LaTeX, created on {\today}}
 \newcommand{\CVWebpage}{https://www.edgriebel.com/}
 \newcommand{\CVWebpageDisp}{www.edgriebel.com}
 
@@ -122,22 +122,33 @@ Work Experience}
 {PDF:ProfessionalWorkExperience}
 
 \Entry
-\href{https://engineering.fb.com/}
-{\textbf{Facebook}}
+\href{https://engineering.fb.com/category/production-engineering/}
+{\textbf{Meta (Facebook)}}
 \hfill
 \DatestampYM{2021}{08} --
 Present
 
 %%\Gap
 %%\BulletItem
-Production Engineer
+Production Engineer 
 \ifLOCATION
 \hfill 
 Remote in Rochester, New York
 \fi
 
 \begin{Detail}
-Production Engineering was created at Facebook to work with engineering teams and partners to champion the Reliability, Scalability, Performance, and Security posture of production services. PEs are hybrid software and systems engineers; they are the glue holding things together, whether that’s infrastructure and software or teams and processes.
+%% Production Engineering was created at Facebook to work with engineering teams and partners to champion the Reliability, Scalability, Performance, and Security posture of production services. PEs are hybrid software and systems engineers; they are the glue holding things together, whether that’s infrastructure and software or teams and processes.
+
+\BulletItem
+My team builds tools for full lifecycle automation of tens to thousands of physical servers or virtual machines by just editing a file.
+\BulletItem
+Selected projects: adding reliability and performance metrics including reporting to existing services; automating firmware updates across multiple hardware vendors.
+
+\Gap
+Technologies: Python, SQL, Rust
+
+\Gap
+\textit{At Meta, a Production Engineer applies software engineering techniques to achieve reliability, scalability, performance, and security goals.}
 
 \end{Detail}
 
@@ -180,11 +191,11 @@ Rochester, New York
 
 \begin{Detail}
 \BulletItem
-Work closely with peer developers, product owners, and operations teams to create a greenfield system to support a new credit card product including processing, accounting, statementing, and user-level APIs.
+Worked closely with peer developers, product owners, and operations teams to create a greenfield system to support a new credit card product including processing, accounting, statementing, and user-level APIs.
 \BulletItem
-Collaborate on creating processes and procedures to support development and maintenance activities.
+Established/enhanced processes and procedures for product development and support.
 \BulletItem
-Mentor, guide, and be an example for other developers on the team for designs and general software engineering practices.
+Mentored and guided other engineers with designs and general software engineering practices.
 
 \Gap
 Technologies: Java, MySQL, Spring Boot, Docker, jOOQ
@@ -209,7 +220,7 @@ Rochester, New York
 
 \begin{Detail}
 \BulletItem
-Provide industry best practices and expertise for new courses in Machine Learning, Artificial Intelligence, and Data Science.
+Provided industry best practices and expertise for new courses in Machine Learning, Artificial Intelligence, and Data Science.
 \end{Detail}
 
 \BigGap
@@ -218,7 +229,8 @@ Provide industry best practices and expertise for new courses in Machine Learnin
 \href{http://www.gocatalant.com}
 {\textbf{Catalant Technologies}}
 \hfill
-\DatestampYM{2019}{06} -- \DatestampYM{2020}{03}
+%% \DatestampYM{2019}{06} -- \DatestampYM{2020}{03}
+\DatestampY{2019} -- \DatestampY{2020}
 
 Principal Software Engineer
 \ifLOCATION
@@ -233,9 +245,8 @@ Determined performance issues impacting Catalant's SaaS product stability/scalab
 Created, built consensus around, and implemented processes and procedures to improve developer productivity and long-term supportability of primary SaaS product. 
 \BulletItem
 Mentored and guided junior developers in industry best practices and product platform.
-\BulletItem
-Work with local and remote product owners, leads, and developers to create features and fix defects.
-
+%% \BulletItem
+%% Work with local and remote product owners, leads, and developers to create features and fix defects.
 
 \Gap
 Technologies: Python, Flask, JavaScript, Bootstrap, MySQL, Docker, Elasticsearch
@@ -248,7 +259,7 @@ Technologies: Python, Flask, JavaScript, Bootstrap, MySQL, Docker, Elasticsearch
 \href{http://www.paychex.com}
 {\textbf{Paychex}}
 \hfill
-\DatestampYM{2013}{06} -- \DatestampYM{2019}{06}
+\DatestampY{2013} -- \DatestampY{2019}
 
 Middleware Architect %% Crappy Name!!
 \ifLOCATION
@@ -265,16 +276,16 @@ At Paychex I worked with cross-functional teams to build: an inventory system to
 Created system in Python to rebalance 20,000 databases among 200 Azure cloud pools with algorithmic, statistical, and machine learning techniques using TensorFlow, Pandas, and scikit-learn.
 
 \BulletItem
-Built internal inventory system with web and REST APIs providing a single source of truth for virtualized and physical hosts, JVMs, CLRs, databases, and middleware. Relationships sourced from external management systems including AppDynamics, Puppet/Facter, ServiceNow, and Oracle.
+Built internal inventory system with web and REST APIs providing a single source of truth for virtualized and physical hosts, JVMs, CLRs, databases, and middleware. Relationships sourced from external management systems including AppDynamics, Puppet, ServiceNow, and Oracle.
 
 \BulletItem
-Created custom Chaos Monkey implementation using Spring Boot and Splunk to randomly kill middleware appliances and Java processes daily in multiple environments.
+Created custom Chaos Monkey implementation that would randomly kill middleware appliances and Java processes daily in multiple environments.
 
 \BulletItem
 Implemented AppDynamics on over 20,000 JVMs to replace a custom built system that collected and monitored JVM metrics, saving four FTEs annually.
 
 \Gap
-Technologies: Java, JavaScript, Oracle PL/SQL, Scikit-Learn, Python, Jupyter, AppDynamics, Application Performance Monitoring (APM), Vagrant
+Technologies: Java, JavaScript, Python, Oracle PL/SQL, Scikit-Learn, AppDynamics, Application Performance Monitoring (APM)
 \end{Detail}
 
 \BigGap
@@ -329,15 +340,15 @@ Rochester, New York
 \fi
 
 \begin{Detail}
-\BulletItem
-Fullstack Java/Oracle/Groovy/ActiveMQ JMS developer for IoT system. 
+%% \BulletItem
+%% Fullstack Java/Oracle/Groovy/ActiveMQ JMS developer for IoT system. 
 \BulletItem
 Owned the integration, performance tuning, and upgrade of Cognos Business Intelligence module.
 \BulletItem
 Internal technical consultant for professional services and product management teams.
 
-\Gap
-Technologies: Java, JavaScript, Oracle PL/SQL, Hudson/Jenkins, Cognos, Business Intelligence
+%% \Gap
+%% Technologies: Java, JavaScript, Oracle PL/SQL, Hudson/Jenkins, Cognos, Business Intelligence
 \end{Detail}
 
 \ifLONG
@@ -570,7 +581,7 @@ Developed systems in C/C++ for MBS mortgage, Treasury, and Repo trading desks.
 
 M.S. in Computer Science
 \hfill 
-\textit{Expected December 2022}
+\textit{Expected Summer 2023}
 
 %% \BulletItem
 %% Concentrations in Computing Systems and Machine Learning
