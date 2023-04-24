@@ -24,7 +24,8 @@
 % CV Info (to be customized).
 \newcommand{\CVAuthor}{Edward E Griebel Jr.}
 \newcommand{\CVTitle}{Ed Griebel CV}
-\newcommand{\CVNote}{Resume written in \LaTeX, created on {\today}}
+%%  \newcommand{\CVNote}{Resume written in \LaTeX, created on {\today}}
+\newcommand{\CVNote}{Resume created in \LaTeX, check it out at \href{https://github.com/edgriebel/resume-cv}{\underline{github.com/edgriebel}}\,!}
 \newcommand{\CVWebpage}{https://www.edgriebel.com/}
 \newcommand{\CVWebpageDisp}{www.edgriebel.com}
 
@@ -86,9 +87,9 @@ breaklinks}
 %% REPLACE WITH CELLPHONE 
 %%
 \,\SubBulletSymbol\, 585-705-1093
-\,\SubBulletSymbol\,
-\href{\CVWebpage}
-{\url{\CVWebpageDisp}}
+%% \,\SubBulletSymbol\,
+%% \href{\CVWebpage}
+%% {\url{\CVWebpageDisp}}
 
 \href{https://github.com/edgriebel}{github.com/edgriebel}
 \,\SubBulletSymbol\,
@@ -97,16 +98,19 @@ breaklinks}
 
 \begin{Body}
 \Section{Summary}{Summary}{PDF:Summary}
-Language-Agnostic Full Stack Developer with over 20 years of success creating software solutions.
-Wide breadth of experience in multiple industries, languages, tools, and third-party applications demonstrates success.
-Excited to create code to deliver high quality systems that support business growth.
+I am a full stack developer with over 20 years of consistent achievement solving diverse business problems. 
+My wide breadth of experience in multiple industries, languages, tools, and third-party applications demonstrates success. 
+I am passionate about creating code to deliver high quality useful software, which results in systems that support business growth.
+%% Language-Agnostic Full Stack Developer with over 20 years of success creating software solutions.
+%% Wide breadth of experience in multiple industries, languages, tools, and third-party applications demonstrates success.
+%% Excited to create code to deliver high quality systems that support business growth.
 \iffalse
 \Entry
 Full Stack/Backend Java architect, developer, and consultant, specializing in Java/Oracle/JavaScript
 solutions and integrations.
 \fi
 \Gap
-Selected expertise: Java, Python, J2EE/JavaEE, MySQL, SQL, PL/SQL, JavaScript, JMS, RabbitMQ, Cognos, AppDynamics.
+Advanced or Expert knowledge of: Python, Java, SQL, team leadership, mentoring of staff at all levels
 \iffalse
 \Gap
 \textit{Business Specialties}: Agile team leadership, customer-focused development, mentoring, requirements gathering and analysis, technical liaison, systems integration, business intelligence
@@ -139,16 +143,33 @@ Remote in Rochester, New York
 \begin{Detail}
 %% Production Engineering was created at Facebook to work with engineering teams and partners to champion the Reliability, Scalability, Performance, and Security posture of production services. PEs are hybrid software and systems engineers; they are the glue holding things together, whether that’s infrastructure and software or teams and processes.
 
+At Meta, a Production Engineer applies software engineering techniques to achieve reliability, scalability, performance, and security goals.
+%% A key part of being a senior engineer is responsiblity for determining scope, driving o
+
 \BulletItem
-My team builds tools for full lifecycle automation of tens to thousands of physical servers or virtual machines by just editing a file.
+Created system to automate firmware updates for multiple hardware vendors across 10,000 physical servers. 
+This enabled me to decommission an obsolete application supported only by my team, reducing our support burden.
+
 \BulletItem
-Selected projects: adding reliability and performance metrics including reporting to existing services; automating firmware updates across multiple hardware vendors.
+Improved oncall and user experience by improving documentation, revamp internal processes, and creating applications and scanners to detect and automatically troubleshoot common error conditions.
+%% Necessary changes determined by analyzing common user questions, recurring support issues, and experience during outages. 
+Changes resulted in reducing oncall shift impact from 15+ hours per week to less than five.
+
+\BulletItem
+Lead project to implement centralized configuration changes to AI models in Facebook ad delivery stack. Effort involved identifying problematic areas and user eductation while ensuring these changes resulted in zero downtime or other negative impacts to ads serving stack.
+
+\BulletItem
+Mentored junior and senior developers in technical and professional skill development.
+
+%% \BulletItem
+%% My team builds tools for full lifecycle automation of tens to thousands of physical servers or virtual machines by just editing a file.
+%% \BulletItem
+%% Selected projects: adding reliability and performance metrics including reporting to existing services; automating firmware updates across multiple hardware vendors.
 
 \Gap
-Technologies: Python, SQL, Rust
+Technologies: Python, Rust, SQL
 
 \Gap
-\textit{At Meta, a Production Engineer applies software engineering techniques to achieve reliability, scalability, performance, and security goals.}
 
 \end{Detail}
 
@@ -158,12 +179,13 @@ Technologies: Python, SQL, Rust
 \href{http://ist.rit.edu/}
 {\textbf{Rochester Institute of Technology}}
 \hfill
-\DatestampYM{2017}{08} --
+%% \DatestampYM{2017}{08} --
+\DatestampY{2017} --
 Present
 
 %%\Gap
 %%\BulletItem
-Adjunct Professor
+Adjunct Professor (\textit{part-time})
 \ifLOCATION
 \hfill 
 Rochester, New York
@@ -171,9 +193,9 @@ Rochester, New York
 
 \begin{Detail}
 \BulletItem
-Currently teaching 3-credit undergraduate course in professional software engineering practices.
+Currently teaching course in industry software engineering practices.
 \BulletItem
-Previous courses taught include undergraduate courses in Java and DBMS/SQL.
+Previously taught courses in Java and DBMS/SQL.
 \end{Detail}
 
 \BigGap
@@ -181,7 +203,8 @@ Previous courses taught include undergraduate courses in Java and DBMS/SQL.
 \href{https://www.marqeta.com}
 {\textbf{Marqeta Inc.}}
 \hfill
-\DatestampYM{2020}{05} -- \DatestampYM{2021}{07}
+%% \DatestampYM{2020}{05} -- \DatestampYM{2021}{07}
+\DatestampY{2020} -- \DatestampY{2021}
 
 Lead Software Engineer
 \ifLOCATION
@@ -208,7 +231,7 @@ Technologies: Java, MySQL, Spring Boot, Docker, jOOQ
 \href{http://logicalopertions.com/}
 {\textbf{Logical Operations}}
 \hfill
-Occasionally since \DatestampYM{2020}{01}
+Occasionally since \DatestampY{2020}
 
 %%\Gap
 %%\BulletItem
@@ -220,7 +243,7 @@ Rochester, New York
 
 \begin{Detail}
 \BulletItem
-Provided industry best practices and expertise for new courses in Machine Learning, Artificial Intelligence, and Data Science.
+Created teaching materials and consulted on industry best practices for new courses in Machine Learning, Artificial Intelligence, and Data Science.
 \end{Detail}
 
 \BigGap
@@ -240,13 +263,11 @@ Rochester, New York
 
 \begin{Detail}
 \BulletItem
-Determined performance issues impacting Catalant's SaaS product stability/scalability and worked with technical managers, product owners, and engineering management for prioritization and resolution.
+Determined performance issues impacting product stability/scalability and worked with technical managers, product owners, and engineering management for prioritization and resolution.
 \BulletItem
 Created, built consensus around, and implemented processes and procedures to improve developer productivity and long-term supportability of primary SaaS product. 
 \BulletItem
 Mentored and guided junior developers in industry best practices and product platform.
-%% \BulletItem
-%% Work with local and remote product owners, leads, and developers to create features and fix defects.
 
 \Gap
 Technologies: Python, Flask, JavaScript, Bootstrap, MySQL, Docker, Elasticsearch
@@ -783,18 +804,18 @@ Awarded by AppDynamics to the company that was able to quickly deploy the AppDyn
 %%%%%%%%%%%%%%%%%%%%%%
 %% OTHER ACTIVITIES %%
 %%%%%%%%%%%%%%%%%%%%%%
-\Section
-{Activities}
-{Activities}
-{PDF:OtherActivities}
+% \Section
+% {Activities}
+% {Activities}
+% {PDF:OtherActivities}
 
-\Entry
-\textbf{Leader, Boy Scouts and Cub Scouts}
-\hfill
-\DatestampY{2007} -- Present
+% \Entry
+% \textbf{Leader, Boy Scouts and Cub Scouts}
+% \hfill
+% \DatestampY{2007} -- Present
 
-\Entry
-\textbf{FAA Certified Private Pilot}
+% \Entry
+% \textbf{FAA Certified Private Pilot}
 %%\hfill
 %%\DatestampY{2000}
 
