@@ -25,7 +25,7 @@
 \newcommand{\CVAuthor}{Edward E Griebel Jr.}
 \newcommand{\CVTitle}{Ed Griebel CV}
 %%  \newcommand{\CVNote}{Resume written in \LaTeX, created on {\today}}
-\newcommand{\CVNote}{Resume created in \LaTeX, check it out at \href{https://github.com/edgriebel/resume-cv}{\underline{github.com/edgriebel}}\,!}
+\newcommand{\CVNote}{Resume created in \LaTeX, check it out at \href{https://github.com/edgriebel/resume-cv}{\underline{github.com/edgriebel}}}
 \newcommand{\CVWebpage}{https://www.edgriebel.com/}
 \newcommand{\CVWebpageDisp}{www.edgriebel.com}
 
@@ -110,7 +110,7 @@ Full Stack/Backend Java architect, developer, and consultant, specializing in Ja
 solutions and integrations.
 \fi
 \Gap
-Advanced or Expert knowledge of: Python, Java, SQL, Linux, team leadership, mentoring
+Advanced or Expert knowledge of: Python, Java, SQL, Linux, Team Leadership, Mentoring
 \iffalse
 \Gap
 \textit{Business Specialties}: Agile team leadership, customer-focused development, mentoring, requirements gathering and analysis, technical liaison, systems integration, business intelligence
@@ -134,29 +134,32 @@ Present
 
 %%\Gap
 %%\BulletItem
-Production Engineer 
-\ifLOCATION
-\hfill 
-Remote in Rochester, New York
-\fi
+Production Engineer -- Remote
 
 \begin{Detail}
 %% Production Engineering was created at Facebook to work with engineering teams and partners to champion the Reliability, Scalability, Performance, and Security posture of production services. PEs are hybrid software and systems engineers; they are the glue holding things together, whether that’s infrastructure and software or teams and processes.
 
-At Meta, a Production Engineer applies software engineering techniques to achieve reliability, scalability, performance, and security goals.
+At Meta, a Production Engineer is a hybrid of Software, Site Reliability, and Systems Engineering disciplines 
+to achieve reliability, scalability, performance, and security goals for services with billions of users.
+
+\Gap
+
+My team, Ads Serving and Delivery, automates the dynamic allocation of Machine Learning models to compute servers for all ads displayed in Facebook and Instagram.
+My prior team created systems to automate creating thousands of new physical and virtual machines by simply editing files using infrastructure-as-code.
+
 %% A key part of being a senior engineer is responsibility for determining scope, driving o
 
 \BulletItem
-Created system to automate firmware updates for multiple hardware vendors across 10,000 physical servers. 
-This enabled me to decommission an obsolete application supported only by my team, reducing our support burden.
+%% Lead project to implement centralized configuration changes to AI models in Facebook ad delivery stack. Effort involved identifying problematic areas and user education while ensuring these changes resulted in zero downtime or other negative impacts to ads serving stack.
+Lead project to centralize configuration changes to ML/AI models in Meta's ad delivery stack, allowing users to safely make changes without causing negagive impacts.
 
 \BulletItem
-Improved oncall and user experience by improving documentation, revamp internal processes, and creating applications and scanners to detect and automatically troubleshoot common error conditions.
+Created systems to automate firmware updates and custom BIOS settings for multiple hardware vendors across 10,000+ physical servers allowing decommissioning an obsolete internal application. 
+
+\BulletItem
+Improved oncall and user experience by creating internal documentation, processes, and applications to detect and perform initial troubleshooting of common errors.
+These changes resulted in reducing oncall shift impact from over 15 to under five hours per week.
 %% Necessary changes determined by analyzing common user questions, recurring support issues, and experience during outages. 
-Changes resulted in reducing oncall shift impact from 15+ hours per week to less than five.
-
-\BulletItem
-Lead project to implement centralized configuration changes to AI models in Facebook ad delivery stack. Effort involved identifying problematic areas and user education while ensuring these changes resulted in zero downtime or other negative impacts to ads serving stack.
 
 \BulletItem
 Mentored junior and senior developers in technical and professional skill development.
@@ -167,7 +170,7 @@ Mentored junior and senior developers in technical and professional skill develo
 %% Selected projects: adding reliability and performance metrics including reporting to existing services; automating firmware updates across multiple hardware vendors.
 
 \Gap
-Technologies: Python, Rust, SQL
+Technologies: Python, Rust, SQL, Terraform
 
 \Gap
 
@@ -185,7 +188,7 @@ Present
 
 %%\Gap
 %%\BulletItem
-Adjunct Professor (\textit{part-time})
+Adjunct Professor -- Part-Time
 \ifLOCATION
 \hfill 
 Rochester, New York
@@ -193,7 +196,7 @@ Rochester, New York
 
 \begin{Detail}
 \BulletItem
-Currently teaching course in industry software engineering practices.
+Currently teaching course in software engineering practices used in industry.
 \BulletItem
 Previously taught courses in Java and DBMS/SQL.
 \end{Detail}
@@ -206,7 +209,7 @@ Previously taught courses in Java and DBMS/SQL.
 %% \DatestampYM{2020}{05} -- \DatestampYM{2021}{07}
 \DatestampY{2020} -- \DatestampY{2021}
 
-Lead Software Engineer
+Lead Software Engineer -- Remote
 \ifLOCATION
 \hfill
 Rochester, New York
@@ -214,14 +217,15 @@ Rochester, New York
 
 \begin{Detail}
 \BulletItem
-Worked closely with peer developers, product owners, and operations teams to create a greenfield system to support a new credit card product including processing, accounting, statementing, and user-level APIs.
+Tech lead for Credit accounting ledgers and inbound transaction APIs.
+Worked closely with developers, product owners, and operations to create a new service for customers to offer white-label credit cards. 
 \BulletItem
 Established/enhanced processes and procedures for product development and support.
 \BulletItem
-Mentored and guided other engineers with designs and general software engineering practices.
+Mentored engineers with designs and general software engineering practices.
 
 \Gap
-Technologies: Java, MySQL, Spring Boot, Docker, jOOQ
+Technologies: Java, MySQL, Spring Boot, Docker
 
 \end{Detail}
 
@@ -235,7 +239,7 @@ Occasionally since \DatestampY{2020}
 
 %%\Gap
 %%\BulletItem
-Consultant
+Consultant -- Part-Time
 \ifLOCATION
 \hfill 
 Rochester, New York
@@ -255,7 +259,7 @@ Created teaching materials and consulted on industry best practices for new cour
 %% \DatestampYM{2019}{06} -- \DatestampYM{2020}{03}
 \DatestampY{2019} -- \DatestampY{2020}
 
-Principal Software Engineer
+Principal Software Engineer -- Remote
 \ifLOCATION
 \hfill
 Rochester, New York
@@ -263,11 +267,11 @@ Rochester, New York
 
 \begin{Detail}
 \BulletItem
-Determined performance issues impacting product stability/scalability and worked with technical managers, product owners, and engineering management for prioritization and resolution.
+Determined performance issues impacting product stability/scalability and negotiated with technical managers, product owners, Lead Architect, and CTO for resources, prioritization and resolution.
 \BulletItem
-Created, built consensus around, and implemented processes and procedures to improve developer productivity and long-term supportability of primary SaaS product. 
+Built consensus around and implemented processes and procedures for primary SaaS product to improve long-term supportability and developer productivity.
 \BulletItem
-Mentored and guided junior developers in industry best practices and product platform.
+Mentored junior developers in industry best practices and product platform.
 
 \Gap
 Technologies: Python, Flask, JavaScript, Bootstrap, MySQL, Docker, Elasticsearch
@@ -354,7 +358,7 @@ Technologies: Java, JavaScript, JQuery-UI, Oracle PL/SQL, Scikit-Learn, TensorFl
 
 %%\Gap
 %%\BulletItem
-Senior Software Engineer
+Senior Software Engineer -- Remote
 \ifLOCATION
 \hfill
 Rochester, New York
@@ -618,12 +622,13 @@ M.S. in Computer Science
 
 %%\Gap
 %%\BulletItem
-B.S. in Computer Engineering
+B.S. in Computer Science and Engineering
 \iffalse
 \hfill
 \DatestampYM{1988}{09} --
 \DatestampYM{1992}{06}
 \fi
+\iffalse
 \begin{Detail}
 \BulletItem
 Senior design project creating reference implementation of DHCP protocol for RFCs 1531 and 1534
@@ -634,6 +639,7 @@ Concentrations in Digital Electronics and Geology
 
 %% Technologies: Computer Science, C, VAX assembly, DHCP, TCP-IP, Digital Electronics
 \end{Detail}
+\fi
 
 %%%%%%%%%%%%
 %% CERTIFICATIONS %%

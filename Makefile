@@ -19,3 +19,6 @@ clean:
 
 cleanall: clean
 	rm $(DOC).pdf
+
+make-docker :
+	docker run -v /Users/ed/Documents/Personal/GitHub/resume-cv:/data --rm edgriebel/tinytex-xelatex /bin/bash -c 'cd data; make'
