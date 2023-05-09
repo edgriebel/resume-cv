@@ -15,7 +15,7 @@ else
 endif
 
 clean:
-	rm -f *.aux *.fdb_latexmk *.log *.out *.xdv xelatex*fls
+	rm -f *.aux *.fdb_latexmk *.log *.out *.xdv *fls
 
 cleanall: clean
 	rm $(DOC).pdf
