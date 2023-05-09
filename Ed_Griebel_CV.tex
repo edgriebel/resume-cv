@@ -24,8 +24,8 @@
 % CV Info (to be customized).
 \newcommand{\CVAuthor}{Edward E Griebel Jr.}
 \newcommand{\CVTitle}{Ed Griebel CV}
-%%  \newcommand{\CVNote}{Resume written in \LaTeX, created on {\today}}
-\newcommand{\CVNote}{Resume created in \LaTeX, check it out at \href{https://github.com/edgriebel/resume-cv}{\underline{github.com/edgriebel}}}
+\newcommand{\CVNote}{Resume created {\today} in \LaTeX. See it at \href{https://github.com/edgriebel/resume-cv}{\underline{github.com/edgriebel}}}
+%% \newcommand{\CVNote}{Resume created in \LaTeX, check it out at \href{https://github.com/edgriebel/resume-cv}{\underline{github.com/edgriebel}}}
 \newcommand{\CVWebpage}{https://www.edgriebel.com/}
 \newcommand{\CVWebpageDisp}{www.edgriebel.com}
 
@@ -146,33 +146,34 @@ Present
 
 %%\Gap
 %%\BulletItem
-Production Engineer
+Production/Software Engineer
 
 \begin{Detail}
 %% Production Engineering was created at Facebook to work with engineering teams and partners to champion the Reliability, Scalability, Performance, and Security posture of production services. PEs are hybrid software and systems engineers; they are the glue holding things together, whether that’s infrastructure and software or teams and processes.
 
-At Meta, a Production Engineer is a hybrid of Software, Site Reliability, and Systems Engineering disciplines 
-to achieve reliability, scalability, performance, and security goals for services with billions of users.
+At Meta, a Production Engineer is a hybrid of Software Engineer, Site Reliability Engineer, and Systems Engineer roles
+who create reliable, scalable, performant, and secure services for billions of users.
 
 \Gap
 
 My team, Ads Serving and Delivery, automates the dynamic allocation of Machine Learning models to compute servers for all ads displayed in Facebook and Instagram.
-My prior team created systems to automate creating thousands of new physical and virtual machines by simply editing files. 
-%% using infrastructure-as-code.
 
 %% A key part of being a senior engineer is responsibility for determining scope, driving o
 
 \BulletItem
 %% Lead project to implement centralized configuration changes to AI models in Facebook ad delivery stack. Effort involved identifying problematic areas and user education while ensuring these changes resulted in zero downtime or other negative impacts to ads serving stack.
-Led project to centralize configuration changes to ML/AI models in Meta's ad delivery stack, allowing users to safely make changes without causing negative impacts.
+Led project to centralize configuration changes to ML/AI models in Meta's ad delivery stack, allowing users to safely make changes without causing unintended problems or outages.
 
+\Gap
+My prior team created systems to automate creating thousands of new physical and virtual machines by simply editing files. 
+%% using infrastructure-as-code.
 \BulletItem
 Created system to automate firmware updates for multiple hardware vendors across 10,000+ physical servers. 
-This system eliminated days or weeks of effort for each team supporting a cluster of servers, as prior process required each cluster owner to either manually update each server or create customized ad-hoc update scripts.
+This system eliminated creating ad-hoc scripts or manually updating servers, saving days or even weeks of effort for each team supporting a cluster of servers.
 
 \BulletItem
 Improved oncall and user experience by creating internal documentation, processes, and applications to detect and perform initial troubleshooting of common errors.
-These changes reduced oncall shift impact by 60\% to under five hours per week.
+These changes reduced oncall shift impact by 60\% to under 5 hours per week.
 %% Necessary changes determined by analyzing common user questions, recurring support issues, and experience during outages. 
 
 %% \BulletItem Mentored junior and senior developers in technical and professional skill development.
@@ -232,7 +233,7 @@ Rochester, New York
 
 \begin{Detail}
 \BulletItem
-Created teaching materials and consulted on industry best practices for new courses in Machine Learning, Artificial Intelligence, and Data Science.
+Created teaching materials and was consulted for new courses in Machine Learning, Artificial Intelligence, and Data Science.
 \end{Detail}
 
 \BigGap
@@ -256,8 +257,7 @@ Tech lead for Credit accounting ledgers and inbound transaction APIs.
 Worked closely with developers, product owners, and operations to create a new service for customers to offer white-label credit cards. 
 \BulletItem
 Established/enhanced processes and procedures for product development and support.
-\BulletItem
-Mentored engineers with designs and general software engineering practices.
+%% \BulletItem Mentored engineers with designs and general software engineering practices.
 
 \Gap
 Technologies: Java, MySQL, Spring Boot, Docker
@@ -281,11 +281,11 @@ Rochester, New York
 
 \begin{Detail}
 \BulletItem
-Determined performance issues impacting product stability/scalability and negotiated with technical managers, product owners, Lead Architect, and CTO for resources, prioritization and resolution.
+Determined and created immediate and 1-year plans to address performance issues impacting product stability and scalability.
+Negotiated with managers, product owners, and CTO for resources and prioritization.
 \BulletItem
 Built consensus around and implemented processes and procedures for primary SaaS product to improve long-term supportability and developer productivity.
-\BulletItem
-Mentored junior developers in industry best practices and product platform.
+%% \BulletItem Mentored junior developers in industry best practices and product platform.
 
 \Gap
 Technologies: Python, Flask, JavaScript, Bootstrap, MySQL, Docker, Elasticsearch
@@ -305,9 +305,9 @@ Technologies: Python, Flask, JavaScript, Bootstrap, MySQL, Docker, Elasticsearch
 \href{http://www.paychex.com}
 {\textbf{Paychex}}
 \hfill
-\DatestampY{2013} -- \DatestampY{2019}
+\DatestampY{2013} -- \DatestampY{2019} and \DatestampY{2005} -- \DatestampY{2010}
 
-Senior Middleware Architect %% Crappy Name!!
+Senior Middleware Architect
 \ifLOCATION
 \hfill
 Rochester, New York
@@ -330,7 +330,10 @@ Created custom Chaos Monkey to regularly terminate middleware and Java processes
 %% in Production and Dev environments.
 
 \BulletItem
-Integrated AppDynamics APM to track inventory and metrics on over 20,000 JVMs, replacing a bespoke system saving four FTEs annually.
+Integrated AppDynamics APM to track inventory and metrics on over 20,000 JVMs, replacing a bespoke system that saved 4 FTEs annually.
+
+\BulletItem
+Led team of 6 to create three public-facing fullstack Java/JavaScript applications.
 
 \Gap
 Technologies: Java, JavaScript, Python, Scikit-Learn, TensorFlow, Oracle PL/SQL, AppDynamics, Application Performance Monitoring
@@ -340,46 +343,11 @@ Technologies: Java, JavaScript, Python, Scikit-Learn, TensorFlow, Oracle PL/SQL,
 
 \BigGap
 
-\iffalse %% ORIGINAL PAYCHEX SECTION
-\Entry
-\href{http://www.paychex.com/}
-{\textbf{Paychex}}
-\ifLOCATION
-\hfill 
-Rochester, New York
-\fi
-
-%%\Gap
-%%\BulletItem
-Middleware Architect
-\hfill
-\DatestampYM{2013}{06} --
-Present
-
-\begin{Detail}
-\BulletItem
-Created a process to rebalance 20,000 databases between 200 compute servers in the cloud. The goal is to maximize density by reducing cost while minimizing overall spikes in usage that affect customers' experience. Using algorithmic, statistical, and machine learning techniques including TensorFlow, Pandas, NumPy, and scikit-learn in Python.
-\BulletItem
-Created an internal IT Inventory system in HTML5/JavaScript/Java/RabbitMQ to provide single source of truth and display relationships between virtual and physical hosts, JVM/CLR runtimes, databases, and middleware infrastructure.
-\BulletItem
-Lead developer on system to gather and present metrics from hosts, JVMs, and middleware components, used to send alerts for problems and provide a single location to view runtime metrics.
-\BulletItem
-Created tools in Python to automate configuration and installation of AppDynamics on thousands of Weblogic servers using Weblogic WLST scripting tool.
-\BulletItem
-Member of cross-functional team for selection, prototyping, and implementation of AppDynamics application monitoring tool. 
-
-\Gap
-Technologies: Java, JavaScript, JQuery-UI, Oracle PL/SQL, Scikit-Learn, TensorFlow, Python, middleware, AppDynamics, Application Performance Monitoring, ClearCase, Ant, Git, JUnit, Vagrant
-\end{Detail}
-\fi
-
-\BigGap
-
 \Entry
 \textbf{Axeda} (division of PTC)
 \hfill 
 %% \DatestampYM{2010}{06} --  \DatestampYM{2013}{06}
-\DatestampY{2010} --  \DatestampY{2013}
+%% \DatestampY{2010} --  \DatestampY{2013}
 
 %%\Gap
 %%\BulletItem
@@ -424,7 +392,7 @@ Rochester, New York
 
 \begin{Detail}
 %% \BulletItem
-Led team of six to create Java/JavaScript front end and webapp for an existing internal fat client, and upgraded two existing web applications to contemporary standards. 
+Led team of 6 to create Java/JavaScript front end and webapp for an existing internal fat client, and upgraded 2 existing web applications to contemporary standards. 
 
 Used Hudson to create a CI/CD pipeline for Dev and QA deployments.
 
@@ -460,7 +428,7 @@ Rochester, New York
 %% \Item
 Created Java applications to build DSL circuits and track sales commissions\comment{; CruiseControl used for Continuous Integration}. 
 
-Automated generation of \comment{20} Excel spreadsheets from Hyperion EssBase saving two FTEs/\$200,000 annually.
+Automated generation of \comment{20} Excel spreadsheets from Hyperion EssBase saving 2 FTEs/\$200,000 annually.
 
 %% \Gap
 %% Technologies: Java, JSP, Struts, Oracle PL/SQL, Continuous Integration, JUnit, Excel VBA, EssBase Data Warehouse, Ant
@@ -567,6 +535,7 @@ Technologies: Sybase, ksh
 %% \BigGap
 %% \textbf{******** SHORT FORM TEST **********}
 
+\iffalse %% merge Payx sections
 \BigGap
 \Entry
 \href{http://www.paychex.com/}
@@ -574,11 +543,12 @@ Technologies: Sybase, ksh
 
 \begin{Detail}
 %% \BulletItem
-	Led team of five to create three public-facing fullstack Java/JavaScript applications.
+	Led team of 5 to create three public-facing fullstack Java/JavaScript applications.
 
 	Created CI/CD deployment pipelines with Hudson.
 	%% Mentored new developers and delivered technical training.
 \end{Detail}
+\fi %% merge Payx sections
 
 \BigGap
 \Entry
@@ -589,7 +559,7 @@ Technologies: Sybase, ksh
 %% \BulletItem
 Created Java applications to build DSL circuits and track sales commissions.
 
-Automated generation of Excel spreadsheets from Hyperion EssBase saving two FTEs annually.
+Automated generation of Excel spreadsheets from Hyperion EssBase saving 2 FTEs annually.
 \end{Detail}
 
 \BigGap
