@@ -1,4 +1,6 @@
-DOC=Ed_Griebel_CV
+export DOC=Ed_Griebel_CV
+
+DEFAULT: make-docker
 
 all: clean $(DOC).pdf images
 
@@ -21,4 +23,7 @@ cleanall: clean
 	rm $(DOC).pdf
 
 make-docker :
-	docker run -v /Users/ed/Documents/Personal/GitHub/resume-cv:/data --rm edgriebel/tinytex-xelatex /bin/bash -c 'cd data; make'
+	docker run -v /Users/ed/Documents/Personal/GitHub/resume-cv:/data --rm edgriebel/tinytex-xelatex /bin/bash -c "cd data; make DOC=$(DOC) all"
+	make clean
+
+.PHONY: DEFAULT clean cleanall

@@ -29,6 +29,7 @@
 \newcommand{\CVWebpage}{https://www.edgriebel.com/}
 \newcommand{\CVWebpageDisp}{www.edgriebel.com}
 
+\newcommand{\tech}[1]{\textrm{Technologies:} #1}
 % PDF settings and properties.
 \hypersetup{
 pdftitle={\CVTitle},
@@ -53,10 +54,12 @@ breaklinks}
 
 \newif\ifLOCATION
 \newif\ifLONG
+\newif\ifNOTSELECTED
 
 
 \LOCATIONfalse
 \LONGfalse
+\NOTSELECTEDfalse
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ACTUAL DOCUMENT.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -85,13 +88,14 @@ breaklinks}
 %%
 %% REPLACE WITH CELLPHONE 
 %%
-\,\SubBulletSymbol\, 585-705-1093
+$|$ %% \,\SubBulletSymbol\, 
+585-705-1093
 %% \,\SubBulletSymbol\,
 %% \href{\CVWebpage}
 %% {\url{\CVWebpageDisp}}
-
+$|$ %% \,\SubBulletSymbol\,
 \href{https://github.com/edgriebel}{github.com/edgriebel}
-\,\SubBulletSymbol\,
+$|$ %% \,\SubBulletSymbol\, 
 \href{https://www.linkedin.com/in/edgriebel}{linkedin.com/in/edgriebel}
 \end{SubTitle}
 
@@ -113,20 +117,25 @@ breaklinks}
 %% V1 With 7 years remote experience I am productive in remote, hybrid, and in-office positions. 
 
 %% -- ChatGPT
-As an accomplished full stack developer with more than 20 years of consistent success across multiple industries and diverse languages and tools, I am deeply passionate about writing code and collaborating with others to design and deliver innovative systems that address complex business challenges. 
-
-\Gap
-With 7 years of remote experience I excel in working effectively in remote, hybrid, and onsite environments.
+%% An accomplished full stack developer with consistent successes across multiple industries. 
+%% Deeply passionate about collaborating with others to design and deliver innovative systems that address complex business challenges. 
+A skilled Software Engineer with consistent success delivering systems while improving the productivity of his teams across multiple industries.
+Deeply passionate about collaborating with others to solve complex business challenges. 
+Core competencies include:
+%% \Gap
+%% With 7 years of remote experience I excel in working effectively in remote, hybrid, and onsite environments.
 %% -- ChatGPT
 
 
 \iffalse
 \Entry
 Full Stack/Backend Java architect, developer, and consultant, specializing in Java/Oracle/JavaScript
-solutions and integrations.
+solutions and integrations. 
 \fi
 \Gap
-Advanced or Expert knowledge of Python, Java, SQL, Linux, Agile team leadership, and Mentoring.
+\begin{center}
+Cross Function Collaboration $|$ \comment{System Design $|$ } \comment{Linux $|$} Agile Leadership $|$ Mentoring $|$ Python $|$ Java $|$ SQL 
+\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PROFESSIONAL WORK EXPERIENCE %%
@@ -139,8 +148,49 @@ Work Experience}
 {PDF:ProfessionalWorkExperience}
 
 \Entry
-\href{http://ist.rit.edu/}
-{\textbf{Rochester Institute of Technology}}
+\textbf{Staff Site Reliability Engineer}, Netskope
+\hfill
+%% \DatestampY{2023} -- Present
+\DatestampYM{2023}{08} -- Present
+
+\Gap
+\begin{Detail}
+
+Currently leading a team of SREs in multiple projects to support Netskope's data-loss prevention product by aligning deliverables with partner roadmaps, including hands-on engineering.
+
+\Gap
+
+\BulletItem
+Provide constructive mentoring, feedback, and guidance to up-skill team members and ensure work meets partner expectations.
+
+\BulletItem
+Participate in and supervise Level 1 and Level 2 24x7 on-call rotations during strategic transformation to a multi-tenant Kubernetes solution.
+
+\BulletItem
+Partner with development team to migrate multi-site Kubernetes microcluster deployments to Spinnaker.
+
+\BulletItem
+%% Drive improvements in on-call and change management procedures resulting in improvements in productivity and stability.
+Drive improvements in on-call and change management procedures to improve productivity and stability.
+
+\BulletItem
+Implement utility to predict database capacity requirements based on existing customer metrics.
+
+%%\BulletItem
+%%Focus on features to improve reliability and supportability when working with Infrastructure, Development and Product teams to deliver reliable, robust, and supportable applications.
+
+%%\BulletItem
+%%Understand better the features and challenges of the existing and new system by participating in the support oncall rotation.
+
+
+\end{Detail}
+
+\tech{Python $|$ Kubernetes $|$ Grafana $|$ Prometheus}
+
+\BigGap
+
+\Entry
+\textbf{Adjunct Professor}, Rochester Institute of Technology \textit{(Part-Time)}
 \hfill
 %% \DatestampYM{2017}{08} --
 \DatestampY{2017} --
@@ -148,32 +198,46 @@ Present
 
 %%\Gap
 %%\BulletItem
-Adjunct Professor -- Part-Time
 \ifLOCATION
 \hfill 
 Rochester, New York
 \fi
 
+\Gap
 \begin{Detail}
+Lecturer for courses in Java, DBMS, scripting, and Commercial software engineering practices.
+\iffalse
 \BulletItem
 Currently teaching course in software engineering practices used in industry.
 \BulletItem
 Previously taught courses in Java and DBMS/SQL.
+\fi
 \end{Detail}
 
 \BigGap
 
 \Entry
-\href{https://engineering.fb.com/category/production-engineering/}
-{\textbf{Meta (Facebook)}}
+\textbf{Production Engineer}, Meta
 \hfill
 \DatestampYM{2021}{08} -- \DatestampYM{2023}{07}
 
 %%\Gap
 %%\BulletItem
-Production/Software Engineer
 
+\Gap
 \begin{Detail}
+Member of Ads Serving and Enterprise Provisioning teams that dynamically allocated Machine Learning models for Facebook and Instagram ads, and automated creation of thousands of physical and virtual machines.
+
+\Gap 
+
+\BulletItem
+	Created system to automate firmware updates for multiple hardware vendors across 10,000+ physical servers, eliminating ad-hoc processes and saving a week of effort for each team supporting a cluster.
+\BulletItem
+	Improved on-call and user experience by improving procedures and adapting systems to detect and troubleshoot common errors, reducing on-call time spent from 20 hours to under 5 weekly.
+\BulletItem
+	Led project to centralize configuration changes to ML/AI models in Meta’s ad delivery stack, allowing machine learning engineers to safely make changes while avoiding unintended problems or outages.
+
+\iffalse 	%% Old version
 %% Production Engineering was created at Facebook to work with engineering teams and partners to champion the Reliability, Scalability, Performance, and Security posture of production services. PEs are hybrid software and systems engineers; they are the glue holding things together, whether that’s infrastructure and software or teams and processes.
 
 At Meta, a Production Engineer is a hybrid of Software Engineer, Site Reliability Engineer, and Systems Engineer roles
@@ -205,53 +269,49 @@ These changes reduced oncall shift impact by 60\% to under 5 hours per week.
 %% My team builds tools for full lifecycle automation of tens to thousands of physical servers or virtual machines by just editing a file.
 %% \BulletItem
 %% Selected projects: adding reliability and performance metrics including reporting to existing services; automating firmware updates across multiple hardware vendors.
+\fi 		%% iffalse
 
-\Gap
-Technologies: Python, Rust, SQL, Terraform
-
-\Gap
+\tech{Python $|$ Rust $|$ SQL $|$ Terraform}
 
 \end{Detail}
 
 \BigGap
 
 \Entry
-\href{https://www.marqeta.com}
-{\textbf{Marqeta Inc.}}
+\textbf{Lead Software Engineer}, Marqeta
 \hfill
 %% \DatestampYM{2020}{05} -- \DatestampYM{2021}{07}
 \DatestampY{2020} -- \DatestampY{2021}
 
-Lead Software Engineer
 \ifLOCATION
 \hfill
 Rochester, New York
 \fi
-
+\Gap
 \begin{Detail}
+Technical lead for credit card processing including accounting ledgers and inbound transaction APIs.
+
+\Gap
+
 \BulletItem
-Tech lead for Credit accounting ledgers and inbound transaction APIs.
 Worked closely with developers, product owners, and operations to create a new service for customers to offer white-label credit cards. 
 \BulletItem
 Established/enhanced processes and procedures for product development and support.
 %% \BulletItem Mentored engineers with designs and general software engineering practices.
 
-\Gap
-Technologies: Java, MySQL, Spring Boot, Docker
+\tech{Java $|$ MySQL $|$ Spring Boot $|$ Docker}
 
 \end{Detail}
 
-\BigGap
+\iffalse %% Hide Logical Operations
 
 \Entry
-\href{http://logicalopertions.com/}
-{\textbf{Logical Operations}}
+\textbf{Consultant - Logical Operations} \textit{(Part-Time)}
 \hfill
 Occasionally since \DatestampY{2020}
 
 %%\Gap
 %%\BulletItem
-Consultant -- Part-Time
 \ifLOCATION
 \hfill 
 Rochester, New York
@@ -261,37 +321,42 @@ Rochester, New York
 \BulletItem
 Created teaching materials and was consulted for new courses in Machine Learning, Artificial Intelligence, and Data Science.
 \end{Detail}
+\fi %% Hide Logical Operations
 
 \BigGap
 
 \Entry
-\href{http://www.gocatalant.com}
-{\textbf{Catalant Technologies}}
+\textbf{Principal Software Engineer}, Catalant Technologies
 \hfill
 %% \DatestampYM{2019}{06} -- \DatestampYM{2020}{03}
 \DatestampY{2019} -- \DatestampY{2020}
 
-Principal Software Engineer
 \ifLOCATION
 \hfill
 Rochester, New York
 \fi
 
+\Gap
+
 \begin{Detail}
-\BulletItem
-Determined and created immediate and 1-year plans to address performance issues impacting product stability and scalability.
-Negotiated with managers, product owners, and CTO for resources and prioritization.
-\BulletItem
 Built consensus around and implemented processes and procedures for primary SaaS product to improve long-term supportability and developer productivity.
-%% \BulletItem Mentored junior developers in industry best practices and product platform.
 
 \Gap
-Technologies: Python, Flask, JavaScript, Bootstrap, MySQL, Docker, Elasticsearch
+
+\BulletItem
+Researched performance, scalability, and stability issues and created short- and long-term plans to address.
+Negotiated with managers, product owners, and CTO for resources and prioritization.
+%% Determined and created immediate and 1-year plans to address performance issues impacting product stability and scalability.
+%% \BulletItem
+%% Negotiated with managers, product owners, and CTO for resources and prioritization.
+\BulletItem Mentored junior developers in company's platform and industry best practices.
+
+\tech{Python $|$ Flask $|$ JavaScript $|$ Bootstrap $|$ MySQL $|$ Docker $|$ Elasticsearch}
 
 \end{Detail}
 
 \BigGap
-\clearpage
+%% \clearpage
 
 %% ===========================================
 %% ===========================================
@@ -300,18 +365,17 @@ Technologies: Python, Flask, JavaScript, Bootstrap, MySQL, Docker, Elasticsearch
 %% ===========================================
 
 \Entry
-\href{http://www.paychex.com}
-{\textbf{Paychex}}
+\textbf{Senior Middleware Architect}, Paychex
 \hfill
 \DatestampY{2013} -- \DatestampY{2019}
 %% \DatestampY{2013} -- \DatestampY{2019} and \DatestampY{2005} -- \DatestampY{2010}
 
-Senior Middleware Architect
 \ifLOCATION
 \hfill
 Rochester, New York
 \fi
 
+\Gap
 \begin{Detail}
 \iffalse
 At Paychex I worked with multiple cross-functional teams to build: an inventory system to track hosts, JVMs, and databases; machine learning systems in Python to efficiently rebalance databases and predict system utilization; custom Chaos Monkey ro randomly terminate process to find configuration weaknesses; and implemented AppDynamics on over 20,000 JVMs.
@@ -325,22 +389,26 @@ Created Python system to rebalance 20,000 databases among 200 Azure cloud pools 
 %% Relationships sourced from external management systems including AppDynamics, Puppet, ServiceNow, and Oracle.
 
 \BulletItem
+Planned and integrated AppDynamics Application Performance Monitoring on over 20,000 JVMs to track inventory and metrics, replacing a bespoke system saving 4 FTEs annually.
+
+\BulletItem
 Created custom Chaos Monkey to regularly terminate middleware and Java processes randomly. 
 %% in Production and Dev environments.
 
-\BulletItem
-Integrated AppDynamics APM to track inventory and metrics on over 20,000 JVMs, replacing a bespoke system that saved 4 FTEs annually.
-
-\Gap
-Technologies: Java, JavaScript, Python, Scikit-Learn, TensorFlow, Oracle PL/SQL, AppDynamics, Application Performance Monitoring
+\tech{Java $|$ JavaScript $|$ Python $|$ Scikit-Learn $|$ \comment{TensorFlow $|$} SQL \comment{$|$ AppDynamics} $|$ Machine Learning}
 \fi
 
 \end{Detail}
 
 \BigGap
 
+\Section
+{Additional Relevant Experience}
+{Additional Relevant Experience}
+{PDF:Additional Relevant Experience}
+
 \Entry
-\textbf{Axeda} (division of PTC)
+\textbf{Lead Software Engineer}, Axeda/PTC
 \hfill 
 %% \DatestampYM{2010}{06} --  \DatestampYM{2013}{06}
 %% \DatestampY{2010} --  \DatestampY{2013}
@@ -353,34 +421,30 @@ Technologies: Java, JavaScript, Python, Scikit-Learn, TensorFlow, Oracle PL/SQL,
 Rochester, New York
 \fi
 
-\begin{Detail}
+%% \begin{Detail}
 %% \BulletItem
 %% Fullstack Java/Oracle/Groovy/ActiveMQ JMS developer for IoT system. 
 %% \BulletItem
-Owned the integration, performance tuning, and upgrade of Cognos Business Intelligence modules.
+%% NOTSELECTED Owned the integration, performance tuning, and upgrade of Cognos Business Intelligence modules.
 %% \BulletItem
-
-Internal technical consultant for professional services and product management teams.
 
 %% \Gap
 %% Technologies: Java, JavaScript, Oracle PL/SQL, Hudson/Jenkins, Cognos, Business Intelligence
-\end{Detail}
+%% \end{Detail}
 
-\BigGap
+\ifNOTSELECTED
 \Entry
-\textbf{Paychex}
+\textbf{Lead Software Engineer, Paychex}
 \hfill
 
 \begin{Detail}
-Led team of 6 to create three public-facing fullstack Java/JavaScript applications.
+Led team of 6 to create three public-facing fullstack applications in Java and JavaScript.
 \end{Detail}
-
 
 \ifLONG
 %% \BigGap
 %% \textbf{******** LONG FORM TEST **********}
 
-\BigGap
 \Entry
 \href{http://www.paychex.com/}
 {\textbf{Paychex}}
@@ -410,14 +474,13 @@ Used Hudson to create a CI/CD pipeline for Dev and QA deployments.
 Member of architecture team to research and set five-year strategy for web application strategy.
 \fi
 
-\Gap
-Technologies: Java, JavaScript, JSP, Struts, WebLogic, Oracle PL/SQL, Hudson/Jenkins 
+\tech{Java, JavaScript, JSP, Struts, WebLogic, Oracle PL/SQL, Hudson/Jenkins}
 \end{Detail}
+\fi %% NOTSELECTED
 
-\BigGap
+%% Short \BigGap
 \Entry
-\href{http://www.frontier.com/}
-{\textbf{Frontier Communications}}
+\textbf{Senior Software Engineer}, Frontier Communications
 \hfill 
 %% \DatestampYM{2001}{11} --  \DatestampYM{2005}{03}
 \DatestampY{2001} -- \DatestampY{2005}
@@ -432,18 +495,17 @@ Rochester, New York
 
 \begin{Detail}
 %% \Item
-Created Java applications to build DSL circuits and track sales commissions\comment{; CruiseControl used for Continuous Integration}. 
+Created applications in Java to build DSL circuits and track sales commissions.
 
-Automated generation of \comment{20} Excel spreadsheets from Hyperion EssBase saving 2 FTEs/\$200,000 annually.
+%% Automated generation of \comment{20} Excel spreadsheets from Hyperion EssBase saving 2 FTEs/\$200,000 annually.
 
 %% \Gap
 %% Technologies: Java, JSP, Struts, Oracle PL/SQL, Continuous Integration, JUnit, Excel VBA, EssBase Data Warehouse, Ant
 \end{Detail}
 
-\BigGap
+%% SHORT \BigGap
 \Entry
-\href{http://www.globalcrossing.com/}
-{\textbf{Global  Crossing} (division of Level3)}
+\textbf{Senior Software Engineer}, Global Crossing/Level3
 \hfill 
 %% \DatestampYM{1999}{03} --  \DatestampYM{2001}{11}
 \DatestampY{1999} -- \DatestampY{2001}
@@ -458,17 +520,17 @@ Rochester, New York
 
 \begin{Detail}
 %% \Item
-Lead multi-site teams to create Java and Perl CGI telecom applications.
+Lead multi-site teams to create telecom applications in Java.
 %%Lead for multi-site team creating Java application to reconcile network and order entry inventory and Perl CGI application to automate creating circuits on ATM and Frame Relay networks.
 
 %% \Gap
 %% Technologies: Perl, CGI, Java, Sybase, Solaris, Ant
 \end{Detail}
 
-\BigGap
+%% SHORT \BigGap
+\Gap
 \Entry
-\href{http://www.jpmorganchase.com/}
-{\textbf{JP Morgan Chase}}
+\textbf{Senior Software Engineer}, JP Morgan Chase
 \hfill 
 %% \DatestampYM{1995}{06} -- \DatestampYM{1999}{02}
 \DatestampY{1995} - \DatestampY{1999}
@@ -483,7 +545,7 @@ New York, New York
 
 \begin{Detail}
 %% \Item
-Created trading systems in C/C++ and tactical applications for equity derivatives and HFT trading desks.
+Created trading systems and tactical applications for equity derivatives and HFT trading desks in C++ and Excel.
 
 %% Tech from 20 years ago would probably be considered not relevant
 %% \Gap
@@ -491,10 +553,9 @@ Created trading systems in C/C++ and tactical applications for equity derivative
 \end{Detail}
 
 %% \iffalse   %%% Hide this old job ??
-\BigGap
+%% SHORT \BigGap
 \Entry
-\href{http://www.blackrock.com/}
-{\textbf{BlackRock Financial Management}}
+\textbf{Software Engineer}, BlackRock Financial Management
 \hfill 
 %% \DatestampYM{1993}{03} --  \DatestampYM{1995}{06}
 \DatestampY{1993} --  \DatestampY{1995}
@@ -509,7 +570,7 @@ New York, New York
 
 \begin{Detail}
 %% \Item
-Developed systems in C/C++ for MBS mortgage, Treasury, and Repo trading desks.
+Developed systems for MBS mortgage, Treasury, and Repo trading desks in C and C++.
 %%\Gap
 %%Technologies: C, C++, Sybase, tcl, ksh, Motif, X11
 \end{Detail}
@@ -556,47 +617,47 @@ Technologies: Sybase, ksh
 \end{Detail}
 \fi %% merge Payx sections
 
-\BigGap
 \Entry
-\href{http://www.frontier.com/}
-{\textbf{Frontier Communications}}
+\textbf{Senior Software Engineer}, Frontier Communications
 
+\ifNOTSELECTED
 \begin{Detail}
 %% \BulletItem
-Created Java applications to build DSL circuits and track sales commissions.
-
-Automated generation of Excel spreadsheets from Hyperion EssBase saving 2 FTEs annually.
+Created applications to build DSL circuits and track sales commissions in Java and SQL.
+%%Automated generation of Excel spreadsheets from Hyperion EssBase saving 2 FTEs annually.
 \end{Detail}
+\fi %% NOTSELECTED
 
-\BigGap
+\ifNOTSELECTED
+\Gap
 \Entry
-\href{http://www.globalcrossing.com/}
-{\textbf{Global  Crossing} (division of Level3)}
+\textbf{Senior Software Engineer}, Global Crossing/Level3
 
 \begin{Detail}
 %% \BulletItem
-Led multi-site teams to create Java and Perl CGI telecom applications.
+Led multi-site teams to create telecom applications in Java and SQL.
 \end{Detail}
+\fi %% NOTSELECTED
 
-\BigGap
 \Entry
-\href{http://www.jpmorganchase.com/}
-{\textbf{JP Morgan Chase}}
+\textbf{Lead Software Engineer}, JP Morgan Chase
+\ifNOTSELECTED
 \begin{Detail}
 %% \BulletItem
-Created trading systems in C/C++ and Excel for equity derivatives and HFT trading desks.
+Created trading systems for equity derivatives and HFT trading desks in C, C++, and Excel.
 \end{Detail}
+\fi %% NOTSELECTED
 
-\BigGap
 \Entry
-\href{http://www.blackrock.com/}
-{\textbf{BlackRock Financial Management}}
+\textbf{Software Engineer}, BlackRock Financial Management
+\ifNOTSELECTED
 \begin{Detail}
 %% \BulletItem
-Developed systems in C/C++ for MBS mortgage, Treasury, and Repo trading desks.
+Developed systems for MBS mortgage, Treasury, and Repo trading desks in C and C++.
 %%\Gap
 %%Technologies: C, C++, Sybase, tcl, ksh, Motif, X11
 \end{Detail}
+\fi %% NOTSELECTED
 \fi %% xxx
 %
 %%%%%%%%%%%%%%%
@@ -609,34 +670,33 @@ Developed systems in C/C++ for MBS mortgage, Treasury, and Repo trading desks.
 {PDF:Education}
 
 \Entry
-\href{https://gatech.edu}
-{\textbf{Georgia Institute of Technology}}
-
-M.S. in Computer Science, 3.9 GPA
+\textbf{M.S. in Computer Science} -
+Georgia Institute of Technology, 3.9 GPA
 \hfill 
-\textit{August 2023}
+2023
 
 \BulletItem
 %% Concentrations in Computing Systems and Machine Learning
-Coursework includes Algorithms, Compilers, Computer Architecture, Software Analysis using LLVM, ML for Trading, and AI Techniques for Robotics
+Algorithms, Compiler Optimization, CPU Architecture, LLVM Software Analysis, ML Trading Techniques, AI Techniques for Robotics
 
-\Gap
+\iffalse %% SKIP Undergrad?
+\BigGap
 
 \Entry
-\href{http://www.bucknell.edu/}
-{\textbf{Bucknell University}}
+\textbf{B.S. in Computer Science and Engineering} - 
+Bucknell University
 \ifLOCATION
 \hfill Lewisburg, Pennsylvania
 \fi
 
 %%\Gap
 %%\BulletItem
-B.S. in Computer Science and Engineering
 \iffalse
 \hfill
 \DatestampYM{1988}{09} --
 \DatestampYM{1992}{06}
 \fi
+\iffalse %% Detail for undergrad?
 \begin{Detail}
 \BulletItem
 Senior design project creating reference implementation of DHCP protocol for RFCs 1531 and 1534
@@ -647,11 +707,13 @@ Concentrations in Digital Electronics and Geology
 
 %% Technologies: Computer Science, C, VAX assembly, DHCP, TCP-IP, Digital Electronics
 \end{Detail}
+\fi %% Detail for undergrad
+\fi %% SKIP Undergrad
 
 %%%%%%%%%%%%
 %% CERTIFICATIONS %%
 %%%%%%%%%%%%
-
+\iffalse %% SKIP CERTS
 \Section
 {Certifications}
 {Certifications}
@@ -671,6 +733,7 @@ This individual also has experience using AppDynamics APIs to extend and customi
 \end{quote}
 \end{Detail}
 \fi
+\fi %% SKIP CERTS
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %% Lecture EXPERIENCE  %%
@@ -763,6 +826,7 @@ As a Java team lead, I was responsible for a small team of developers. Since thi
 %%%%%%%%%%%%
 %% AWARDS %%
 %%%%%%%%%%%%
+\iffalse %% SKIP AWARDS
 
 \Section
 {Awards}
@@ -770,21 +834,25 @@ As a Java team lead, I was responsible for a small team of developers. Since thi
 {PDF:Awards}
 \textbf{Paychex Paragon Award for Resiliency}
 \hfill
-\DatestampYM{2019}{01}
+\DatestampY{2019}
+%% \DatestampYM{2019}{01}
 \begin{Detail}
 %% Every year, five projects are chosen across Paychex that demonstrate resiliency, exceptional delivery, operational efficiency, etc.
 Our project, "Adaptive Load Balancing", was chosen for this annual award. 
-It routes requests in F5 BigIP GTM and LTMs across servers and data centers based on server load, real-time statistics, and other measures to reduce outages and improve response times for services using it.
+It routes requests in F5 BigIP GTM and LTMs across servers and data centers based on server load, real-time statistics, and other measures to reduce outages and improve response times for services.
 \end{Detail}
 \BigGap
 
 \textbf{AppDynamics Scale Award}
 \hfill
-\DatestampYM{2015}{11}
-\begin{Detail}
+%% \DatestampYM{2015}{11}
+\DatestampY{2015}
+%% \begin{Detail}
 %% Awarded by AppDynamics to the company that was able to quickly deploy the AppDynamics tool across the most complex environment. 
-Awarded for successfully deploying AppDynamics to over 2,000 JBoss, WebLogic, and Windows IIS servers across our fleet in our first year.
-\end{Detail}
+
+Awarded for successfully deploying AppDynamics to over 20,000 JBoss, WebLogic, and Windows IIS servers across our fleet in our first year.
+%% \end{Detail}
+\fi %% SKIP AWARDS
 
 %%%%%%%%%%%%%%%%%%
 %% PUBLICATIONS %%
