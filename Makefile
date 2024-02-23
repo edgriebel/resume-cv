@@ -1,4 +1,4 @@
-export DOC=Ed_Griebel_CV
+export DOC=Ed_Griebel_onepage_CV
 
 DEFAULT: make-docker
 
