@@ -1,0 +1,15 @@
+FROM alpine
+
+RUN apk update && apk upgrade --no-cache && apk add --no-cache perl wget make fontconfig
+# RUN wget -qO- --no-check-certificate "https://yihui.name/gh/tinytex/tools/install-unx.sh" | sh 
+RUN wget -qO- "https://yihui.name/gh/tinytex/tools/install-unx.sh" | sh -x
+
+ENV PATH="${PATH}:/root/bin"
+
+RUN tlmgr install xetex
+RUN fmtutil-sys --all
+
+RUN tlmgr install hyphenat tracklang xltxtra realscripts
+
+# ghostscript is not germane to creating tex->pdf so putting this at the end
+RUN apk add --no-cache ghostscript

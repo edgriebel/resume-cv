@@ -1,5 +1,8 @@
 export DOC=Ed_Griebel_onepage_CV
 
+DOCKER_IMAGE=edgriebel/tinytex-xelatex
+# DOCKER_IMAGE=edgriebel/tinytex-xelatex-alpine
+
 DEFAULT: make-docker
 
 all: clean $(DOC).pdf images
@@ -23,7 +26,10 @@ cleanall: clean
 	rm -f $(DOC).pdf
 
 make-docker :
-	docker run -v /Users/ed/Documents/Personal/GitHub/resume-cv:/data --rm edgriebel/tinytex-xelatex /bin/bash -c "cd data; make DOC=$(DOC) all"
+	docker run -v /Users/ed/Documents/Personal/GitHub/resume-cv:/data --rm $(DOCKER_IMAGE) /bin/sh -c "cd data; make DOC=$(DOC) all"
 	make clean
+
+make-image : Dockerfile
+	docker build -t $(DOCKER_IMAGE) .
 
 .PHONY: DEFAULT clean cleanall
