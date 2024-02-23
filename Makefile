@@ -20,7 +20,7 @@ clean:
 	rm -f *.aux *.fdb_latexmk *.log *.out *.xdv *fls
 
 cleanall: clean
-	rm $(DOC).pdf
+	rm -f $(DOC).pdf
 
 make-docker :
 	docker run -v /Users/ed/Documents/Personal/GitHub/resume-cv:/data --rm edgriebel/tinytex-xelatex /bin/bash -c "cd data; make DOC=$(DOC) all"
