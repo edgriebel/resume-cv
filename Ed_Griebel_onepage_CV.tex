@@ -1,0 +1,908 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% See "README.md" for instructions on compiling this document.
+
+%% \documentclass[letterpaper,MMMMyyyy,nonstopmode]{simpleresumecv_stacked}
+\documentclass[MMMMyyyy,nonstopmode]{simpleresumecv_stacked}
+% Class options:
+% a4paper, letterpaper, nonstopmode, draftmode
+% MMMyyyy, ddMMMyyyy, MMMMyyyy, ddMMMMyyyy, yyyyMMdd, yyyyMM, yyyy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{Edward E Griebel Jr.}
+\newcommand{\CVTitle}{Ed Griebel CV}
+\newcommand{\CVNote}{Resume created {\today} in \LaTeX. See it at \href{https://github.com/edgriebel/resume-cv}{\underline{github.com/edgriebel}}}
+%% \newcommand{\CVNote}{Resume created in \LaTeX, check it out at \href{https://github.com/edgriebel/resume-cv}{\underline{github.com/edgriebel}}}
+\newcommand{\CVWebpage}{https://www.edgriebel.com/}
+\newcommand{\CVWebpageDisp}{www.edgriebel.com}
+
+\newcommand{\tech}[1]{\Gap\textrm{Technologies:} #1}
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={\CVWebpage},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+unicode=true,
+bookmarks=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Shorthand.
+\newcommand{\Code}[1]{\mbox{\textbf{#1}}}
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+\newcommand{\comment}[1]{\ignorespaces} %% https://tex.stackexchange.com/a/276698/143811
+
+\newif\ifLOCATION
+\newif\ifLONG
+\newif\ifNOTSELECTED
+
+
+\LOCATIONfalse
+\LONGfalse
+\NOTSELECTEDfalse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%% Use Sans font
+%% Default Sans font looks not too sharp, Company name in Serif font
+%%\renewcommand\familydefault{\sfdefault}
+
+%% \UseSecondaryFont %% <-- Doesn't work, doesn't switch font
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\Title{\CVAuthor}
+
+\begin{SubTitle}
+%%
+%% REPLACE WITH ADDRESS
+%%
+%% \textit{<my address>}
+\par 
+\href{mailto:edgriebel@gmail.com}
+{edgriebel@gmail.com}
+%%
+%% REPLACE WITH CELLPHONE 
+%%
+$|$ %% \,\SubBulletSymbol\, 
+585-705-1093
+%% \,\SubBulletSymbol\,
+%% \href{\CVWebpage}
+%% {\url{\CVWebpageDisp}}
+$|$ %% \,\SubBulletSymbol\,
+\href{https://github.com/edgriebel}{github.com/edgriebel}
+$|$ %% \,\SubBulletSymbol\, 
+\href{https://www.linkedin.com/in/edgriebel}{linkedin.com/in/edgriebel}
+\end{SubTitle}
+
+\begin{Body}
+
+%% \Section{Summary}{Summary}{PDF:Summary}
+\item
+%% ORIG
+
+%% 2021 LinkedIn Language-Agnostic Full Stack Developer with over 20 years of success creating software solutions.
+%% 2021 LinkedIn Wide breadth of experience in multiple industries, languages, tools, and third-party applications demonstrates success.
+%% 2021 LinkedIn Excited to create code to deliver high quality systems that support business growth.
+
+%% ORIG I am a full stack developer with over 20 years of consistent achievement solving diverse business problems.
+%% ORIG My wide breadth of experience in multiple industries, languages, and tools demonstrates success. 
+%% ORIG With 7 years remote experience I am productive in remote, hybrid, and in-office positions. 
+
+%% V1 I am passionate about writing code and working with people to deliver systems that solve business challenges.
+%% V1 As a full stack developer with over 20 years of consistent achievement 
+%% V1 in multiple industries with diverse languages and tools.
+%% V1 With 7 years remote experience I am productive in remote, hybrid, and in-office positions. 
+
+%% -- ChatGPT
+%% An accomplished full stack developer with consistent successes across multiple industries. 
+%% Deeply passionate about collaborating with others to design and deliver innovative systems that address complex business challenges. 
+\begin{center}
+Skilled Staff Software Engineer with consistent success in building and improving systems across multiple industries while making teams more productive.
+Adept at solving complex business challenges by partnering with others.
+
+\BigGap
+Core competencies:
+Cross-Functional Collaboration $|$ \comment{System Design $|$ } \comment{Linux $|$} Agile Leadership $|$ Mentoring $|$ Python $|$ Java $|$ SQL 
+\end{center}
+%% \Gap
+%% With 7 years of remote experience I excel in working effectively in remote, hybrid, and onsite environments.
+%% -- ChatGPT
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PROFESSIONAL WORK EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Professional Work Experience}
+{Professional Work Experience}
+{PDF:ProfessionalWorkExperience}
+
+\Entry
+\textbf{Staff Site Reliability Engineer}, Netskope
+\hfill
+%% \DatestampY{2023} -- Present
+\DatestampYM{2023}{08} -- Present
+
+\Gap
+\begin{Detail}
+
+Currently leading a team of SREs in multiple projects to support Netskope's data-loss prevention product by aligning deliverables with partner roadmaps, including hands-on engineering.
+
+\Gap
+
+\BulletItem
+Mentor, guide, and up-skill team members, ensuring that all work is appropriately performant and supportable.
+
+\BulletItem
+Participate in and supervise L1 and L2 24x7 on-call rotations during multi-year Kubernetes transformation.
+
+%% \BulletItem
+%% Drive improvements in on-call and change management procedures to improve productivity and stability.
+
+\BulletItem
+Partner with development team  and peers to migrate multi-site Kubernetes microcluster deployments to Spinnaker.
+
+\BulletItem
+Implement utility to predict database capacity requirements based on existing customer metrics.
+
+\end{Detail}
+
+\tech{Python $|$ Kubernetes $|$ Grafana $|$ Prometheus}
+
+\BigGap
+
+\iffalse %% Move to Education
+\Entry
+\textbf{Adjunct Professor}, Rochester Institute of Technology \textit{(Part-Time)}
+\hfill
+%% \DatestampYM{2017}{08} --
+\DatestampY{2017} --
+Present
+
+%%\Gap
+%%\BulletItem
+\ifLOCATION
+\hfill 
+Rochester, New York
+\fi
+
+\Gap
+\begin{Detail}
+Lecturer for courses in Java, SQL/DBMS, and commercial software engineering practices.
+\end{Detail}
+
+\BigGap
+\fi
+
+\Entry
+\textbf{Production Engineer}, Meta
+\hfill
+\DatestampYM{2021}{08} -- \DatestampYM{2023}{07}
+
+%%\Gap
+%%\BulletItem
+
+\Gap
+\begin{Detail}
+Member of Ads Serving team that dynamically allocated Machine Learning models for Facebook and Instagram ads, and Enterprise Provisioning team that automated creation of thousands of physical and virtual machines.
+
+\Gap 
+
+\BulletItem
+	Created system to automate firmware updates for multiple hardware vendors across 10,000+ physical servers, eliminating ad-hoc processes and saving a week of effort for each team supporting a cluster.
+\BulletItem
+	Improved on-call and user experience by improving procedures and adapting systems to detect and troubleshoot common errors, reducing on-call time spent from 20 hours to under 5 weekly.
+\BulletItem
+	Led project to centralize configuration changes to ML/AI models in Meta’s ad delivery stack, allowing machine learning engineers to safely make changes while avoiding unintended problems or outages.
+
+\iffalse 	%% Old version
+%% Production Engineering was created at Facebook to work with engineering teams and partners to champion the Reliability, Scalability, Performance, and Security posture of production services. PEs are hybrid software and systems engineers; they are the glue holding things together, whether that’s infrastructure and software or teams and processes.
+
+At Meta, a Production Engineer is a hybrid of Software Engineer, Site Reliability Engineer, and Systems Engineer roles
+who create reliable, scalable, performant, and secure services for billions of users.
+
+\Gap
+
+My most recent team, Ads Serving and Delivery, automated the dynamic allocation of Machine Learning models to compute servers for all ads displayed in Facebook and Instagram.
+
+\BulletItem
+%% Lead project to implement centralized configuration changes to AI models in Facebook ad delivery stack. Effort involved identifying problematic areas and user education while ensuring these changes resulted in zero downtime or other negative impacts to ads serving stack.
+Led project to centralize configuration changes to ML/AI models in Meta's ad delivery stack, allowing users to safely make changes without causing unintended problems or outages.
+
+\Gap
+My prior team created systems to automate creating thousands of new physical and virtual machines by simply editing files. 
+%% using infrastructure-as-code.
+\BulletItem
+Created system to automate firmware updates for multiple hardware vendors across 10,000+ physical servers. 
+This system eliminated creating ad-hoc scripts or manually updating servers, saving days or even weeks of effort for each team supporting a cluster of servers.
+
+\BulletItem
+Improved oncall and user experience by creating internal documentation, processes, and applications to detect and perform initial troubleshooting of common errors.
+These changes reduced oncall shift impact by 60\% to under 5 hours per week.
+%% Necessary changes determined by analyzing common user questions, recurring support issues, and experience during outages. 
+
+%% \BulletItem Mentored junior and senior developers in technical and professional skill development.
+
+%% \BulletItem
+%% My team builds tools for full lifecycle automation of tens to thousands of physical servers or virtual machines by just editing a file.
+%% \BulletItem
+%% Selected projects: adding reliability and performance metrics including reporting to existing services; automating firmware updates across multiple hardware vendors.
+\fi 		%% iffalse
+
+\tech{Python $|$ Rust $|$ SQL $|$ Terraform}
+
+\end{Detail}
+
+\BigGap
+
+\Entry
+\textbf{Lead Software Engineer}, Marqeta
+\hfill
+%% \DatestampYM{2020}{05} -- \DatestampYM{2021}{07}
+\DatestampY{2020} -- \DatestampY{2021}
+
+\ifLOCATION
+\hfill
+Rochester, New York
+\fi
+\Gap
+\begin{Detail}
+Technical lead for credit card processing including accounting ledgers and inbound transaction APIs.
+
+\Gap
+
+\BulletItem
+Worked closely with developers, product owners, and operations to create a new white-label credit card product. 
+%% \BulletItem
+%% Established/enhanced processes and procedures for product development and support.
+%% \BulletItem Mentored engineers with designs and general software engineering practices.
+
+\tech{Java $|$ MySQL $|$ Spring Boot $|$ Docker}
+
+\end{Detail}
+
+\iffalse %% Hide Logical Operations
+
+\Entry
+\textbf{Consultant - Logical Operations} \textit{(Part-Time)}
+\hfill
+Occasionally since \DatestampY{2020}
+
+%%\Gap
+%%\BulletItem
+\ifLOCATION
+\hfill 
+Rochester, New York
+\fi
+
+\begin{Detail}
+\BulletItem
+Created teaching materials and was consulted for new courses in Machine Learning, Artificial Intelligence, and Data Science.
+\end{Detail}
+\fi %% Hide Logical Operations
+
+\BigGap
+
+\Entry
+\textbf{Principal Software Engineer}, Catalant Technologies
+\hfill
+%% \DatestampYM{2019}{06} -- \DatestampYM{2020}{03}
+\DatestampY{2019} -- \DatestampY{2020}
+
+\ifLOCATION
+\hfill
+Rochester, New York
+\fi
+
+\Gap
+
+\begin{Detail}
+Built consensus around and implemented processes and procedures for primary SaaS product to improve supportability and developer productivity.
+Mentored junior developers in company's platform and industry best practices.
+
+\Gap
+\BulletItem
+Researched and created immediate and long-term plans to address performance, scalability, and stability issues.
+%% Negotiated with managers, product owners, and CTO for resources and prioritization.
+%% Determined and created immediate and 1-year plans to address performance issues impacting product stability and scalability.
+%% \BulletItem
+%% Negotiated with managers, product owners, and CTO for resources and prioritization.
+
+\tech{Python $|$ Flask $|$ JavaScript $|$ Bootstrap $|$ MySQL $|$ Docker $|$ Elasticsearch}
+
+\end{Detail}
+
+\BigGap
+%% \clearpage
+
+%% ===========================================
+%% ===========================================
+%% =============     PAGE 2   ================
+%% ===========================================
+%% ===========================================
+
+\Entry
+\textbf{Senior Middleware Architect}, Paychex
+\hfill
+\DatestampY{2013} -- \DatestampY{2019}
+%% \DatestampY{2013} -- \DatestampY{2019} and \DatestampY{2005} -- \DatestampY{2010}
+
+\ifLOCATION
+\hfill
+Rochester, New York
+\fi
+
+\Gap
+\begin{Detail}
+\iffalse
+At Paychex I worked with multiple cross-functional teams to build: an inventory system to track hosts, JVMs, and databases; machine learning systems in Python to efficiently rebalance databases and predict system utilization; custom Chaos Monkey ro randomly terminate process to find configuration weaknesses; and implemented AppDynamics on over 20,000 JVMs.
+\fi
+
+\iftrue
+\BulletItem
+Created system to rebalance 20,000 databases among 200 Azure cloud pools with statistical and ML techniques.
+
+%% \BulletItem Built internal inventory system with web and REST APIs providing a single source of truth for virtualized and physical hosts, JVMs, CLRs, databases, and middleware. 
+%% Relationships sourced from external management systems including AppDynamics, Puppet, ServiceNow, and Oracle.
+
+\BulletItem
+Replaced a bespoke system with AppDynamics across 20,000 JVMs to track inventory and metrics, saving 4 FTEs.
+
+\BulletItem
+Created custom Chaos Monkey to regularly terminate middleware and Java processes randomly. 
+%% in Production and Dev environments.
+
+\tech{Java $|$ JavaScript $|$ Python $|$ Scikit-Learn $|$ \comment{TensorFlow $|$} SQL \comment{$|$ AppDynamics} $|$ Machine Learning}
+\fi
+
+\end{Detail}
+
+\BigGap
+
+\Section
+{Additional Relevant Experience}
+{Additional Relevant Experience}
+{PDF:Additional Relevant Experience}
+
+\Entry
+\textbf{Adjunct Professor}, Rochester Institute of Technology
+\Item 
+Lecturer for courses in Java, SQL/DBMS, and commercial software engineering practices
+
+\Entry
+\textbf{Lead Software Engineer}, Axeda/PTC
+\hfill 
+%% \DatestampYM{2010}{06} --  \DatestampYM{2013}{06}
+%% \DatestampY{2010} --  \DatestampY{2013}
+
+%%\Gap
+%%\BulletItem
+%% Senior Software Engineer
+\ifLOCATION
+\hfill
+Rochester, New York
+\fi
+
+%% \begin{Detail}
+%% \BulletItem
+%% Fullstack Java/Oracle/Groovy/ActiveMQ JMS developer for IoT system. 
+%% \BulletItem
+%% NOTSELECTED Owned the integration, performance tuning, and upgrade of Cognos Business Intelligence modules.
+%% \BulletItem
+
+%% \Gap
+%% Technologies: Java, JavaScript, Oracle PL/SQL, Hudson/Jenkins, Cognos, Business Intelligence
+%% \end{Detail}
+
+\ifNOTSELECTED
+\Entry
+\textbf{Lead Software Engineer, Paychex}
+\hfill
+
+\begin{Detail}
+Led team of 6 to create three public-facing fullstack applications in Java and JavaScript.
+\end{Detail}
+
+\ifLONG
+%% \BigGap
+%% \textbf{******** LONG FORM TEST **********}
+
+\Entry
+\href{http://www.paychex.com/}
+{\textbf{Paychex}}
+\hfill 
+%%\DatestampYM{2005}{03} --  \DatestampYM{2010}{06}
+\DatestampY{2005} -- \DatestampY{2010}
+
+%%\Gap
+%%\BulletItem
+Lead Developer
+\ifLOCATION
+\hfill
+Rochester, New York
+\fi
+
+\begin{Detail}
+%% \BulletItem
+Led team of 6 to create Java/JavaScript front end and webapp for an existing internal fat client, and upgraded 2 existing web applications to contemporary standards. 
+
+Used Hudson to create a CI/CD pipeline for Dev and QA deployments.
+
+%% \BulletItem
+%% Mentored new developers and delivered technical training.
+%% 2021-05-02 TMI
+\iffalse
+\BulletItem
+Member of architecture team to research and set five-year strategy for web application strategy.
+\fi
+
+\tech{Java, JavaScript, JSP, Struts, WebLogic, Oracle PL/SQL, Hudson/Jenkins}
+\end{Detail}
+\fi %% NOTSELECTED
+
+%% Short \BigGap
+\Entry
+\textbf{Senior Software Engineer}, Frontier Communications
+\hfill 
+%% \DatestampYM{2001}{11} --  \DatestampYM{2005}{03}
+\DatestampY{2001} -- \DatestampY{2005}
+
+%%\Gap
+%%\BulletItem
+Senior Software Developer
+\ifLOCATION
+\hfill
+Rochester, New York
+\fi
+
+\begin{Detail}
+%% \Item
+Created applications in Java to build DSL circuits and track sales commissions.
+
+%% Automated generation of \comment{20} Excel spreadsheets from Hyperion EssBase saving 2 FTEs/\$200,000 annually.
+
+%% \Gap
+%% Technologies: Java, JSP, Struts, Oracle PL/SQL, Continuous Integration, JUnit, Excel VBA, EssBase Data Warehouse, Ant
+\end{Detail}
+
+%% SHORT \BigGap
+\Entry
+\textbf{Senior Software Engineer}, Global Crossing/Level3
+\hfill 
+%% \DatestampYM{1999}{03} --  \DatestampYM{2001}{11}
+\DatestampY{1999} -- \DatestampY{2001}
+
+%%\Gap
+%%\BulletItem
+Senior/Lead Developer
+\ifLOCATION
+\hfill
+Rochester, New York
+\fi
+
+\begin{Detail}
+%% \Item
+Lead multi-site teams to create telecom applications in Java.
+%%Lead for multi-site team creating Java application to reconcile network and order entry inventory and Perl CGI application to automate creating circuits on ATM and Frame Relay networks.
+
+%% \Gap
+%% Technologies: Perl, CGI, Java, Sybase, Solaris, Ant
+\end{Detail}
+
+%% SHORT \BigGap
+\Gap
+\Entry
+\textbf{Senior Software Engineer}, JP Morgan Chase
+\hfill 
+%% \DatestampYM{1995}{06} -- \DatestampYM{1999}{02}
+\DatestampY{1995} - \DatestampY{1999}
+
+%%\Gap
+%%\BulletItem
+Lead Developer
+\ifLOCATION
+\hfill
+New York, New York
+\fi
+
+\begin{Detail}
+%% \Item
+Created trading systems and tactical applications for equity derivatives and HFT trading desks in C++ and Excel.
+
+%% Tech from 20 years ago would probably be considered not relevant
+%% \Gap
+%% Technologies: C, C++, Sybase, Excel VBA, ClearCase
+\end{Detail}
+
+%% \iffalse   %%% Hide this old job ??
+%% SHORT \BigGap
+\Entry
+\textbf{Software Engineer}, BlackRock Financial Management
+\hfill 
+%% \DatestampYM{1993}{03} --  \DatestampYM{1995}{06}
+\DatestampY{1993} --  \DatestampY{1995}
+
+%%\Gap
+%%\BulletItem
+Software Developer
+\ifLOCATION
+\hfill
+New York, New York
+\fi
+
+\begin{Detail}
+%% \Item
+Developed systems for MBS mortgage, Treasury, and Repo trading desks in C and C++.
+%%\Gap
+%%Technologies: C, C++, Sybase, tcl, ksh, Motif, X11
+\end{Detail}
+%% \fi
+
+\iffalse
+\BigGap
+\Entry
+\textbf{Prophet 21, Inc.}
+\hfill 
+Yardley, Pennsylvania
+
+%%\Gap
+%%\BulletItem
+Associate Developer
+\hfill
+\DatestampYM{1992}{06} --  \DatestampYM{1993}{03}
+
+\begin{Detail}
+\BulletItem
+Wrote and maintained features for point-of-sale systems targeted to retailers and wholesalers
+
+\Gap
+Technologies: Sybase, ksh
+\end{Detail}
+\fi
+
+\else
+%% \BigGap
+%% \textbf{******** SHORT FORM TEST **********}
+
+\iffalse %% merge Payx sections
+\BigGap
+\Entry
+\href{http://www.paychex.com/}
+{\textbf{Paychex}}
+
+\begin{Detail}
+%% \BulletItem
+	Led team of 5 to create three public-facing fullstack Java/JavaScript applications.
+
+	Created CI/CD deployment pipelines with Hudson.
+	%% Mentored new developers and delivered technical training.
+\end{Detail}
+\fi %% merge Payx sections
+
+%% \Entry
+%% \textbf{Senior Software Engineer}, Frontier Communications
+
+\ifNOTSELECTED
+\begin{Detail}
+%% \BulletItem
+Created applications to build DSL circuits and track sales commissions in Java and SQL.
+%%Automated generation of Excel spreadsheets from Hyperion EssBase saving 2 FTEs annually.
+\end{Detail}
+\fi %% NOTSELECTED
+
+\ifNOTSELECTED
+\Gap
+\Entry
+\textbf{Senior Software Engineer}, Global Crossing/Level3
+
+\begin{Detail}
+%% \BulletItem
+Led multi-site teams to create telecom applications in Java and SQL.
+\end{Detail}
+\fi %% NOTSELECTED
+
+\Entry
+\textbf{Senior Software Engineer}, JP Morgan Chase
+\ifNOTSELECTED
+\begin{Detail}
+%% \BulletItem
+Created trading systems for equity derivatives and HFT trading desks in C, C++, and Excel.
+\end{Detail}
+\fi %% NOTSELECTED
+
+\Entry
+\textbf{Software Engineer}, BlackRock Financial Management
+\ifNOTSELECTED
+\begin{Detail}
+%% \BulletItem
+Developed systems for MBS mortgage, Treasury, and Repo trading desks in C and C++.
+%%\Gap
+%%Technologies: C, C++, Sybase, tcl, ksh, Motif, X11
+\end{Detail}
+\fi %% NOTSELECTED
+\fi %% xxx
+%
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\Section
+{Education}
+{Education}
+{PDF:Education}
+
+\Entry
+\textbf{Master of Science in Computer Science} -
+Georgia Institute of Technology, 3.9 GPA
+%% \hfill 2023
+
+\BulletItem
+Algorithms, Compiler Optimization, CPU Architecture, LLVM Software Analysis, Applied ML and AI
+
+\iftrue %% SKIP Undergrad?
+\Gap
+
+\Entry
+\textbf{Bachelor of Science in Computer Science and Engineering} - 
+Bucknell University
+\ifLOCATION
+\hfill Lewisburg, Pennsylvania
+\fi
+
+%%\Gap
+%%\BulletItem
+\iffalse
+\hfill
+\DatestampYM{1988}{09} --
+\DatestampYM{1992}{06}
+\fi
+\iffalse %% Detail for undergrad?
+\begin{Detail}
+\BulletItem
+Senior design project creating reference implementation of DHCP protocol for RFCs 1531 and 1534
+%%\BulletItem
+%%Summer research internship in digital image processing
+\BulletItem
+Concentrations in Digital Electronics and Geology
+
+%% Technologies: Computer Science, C, VAX assembly, DHCP, TCP-IP, Digital Electronics
+\end{Detail}
+\fi %% Detail for undergrad
+\fi %% SKIP Undergrad
+
+%%%%%%%%%%%%
+%% CERTIFICATIONS %%
+%%%%%%%%%%%%
+\iffalse %% SKIP CERTS
+\Section
+{Certifications}
+{Certifications}
+{PDF:Certifications}
+
+\Entry
+\href{https://www.appdynamics.com/certifications/}
+{\textbf{AppDynamics Certified Implementations Professional}}
+\hfill
+\DatestampYM{2016}{11}
+%% 2021-05-02 TMI, show cert only
+\iffalse
+\begin{Detail}
+\begin{quote}
+``An individual who attains the AppDynamics Certified Implementation Professional certification has demonstrated that he or she possesses the minimum acceptable level of knowledge and skills required to deploy AppDynamics Controllers, Agents, EUM Servers and Analytics Servers. 
+This individual also has experience using AppDynamics APIs to extend and customize the AppDynamics platform.''
+\end{quote}
+\end{Detail}
+\fi
+\fi %% SKIP CERTS
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Lecture EXPERIENCE  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% 2021-05-02 DELETE entire PRESENTATION SECTION 
+\newif\ifA
+\newif\ifB
+\newif\ifC
+\Afalse
+\Bfalse
+\Cfalse
+\ifA
+
+\Section
+{Presentations}%% and Mentoring Experience}
+{Presentation}%%  and Mentoring Experience}
+{PDF:Presentations}%%AndMentoringExperience}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\iffalse      %% INCLUDE only for cv style
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\Entry
+\textbf{Adjunct Lecturer}
+\hfill
+Fall 2017
+
+Rochester Institute of Technology
+\begin{Detail}
+\Item
+Lecturer for a class of 30 undergraduate and graduate students for the course ISTE-120, an introduction to Java course for Information Science and Technology majors.
+\end{Detail}
+
+\BigGap
+\Entry
+\textbf{Summer Co-Op Mentor}
+\hfill
+Summer 2015
+
+Paychex, Inc.
+\begin{Detail}
+\Item
+After interviewing a number of students, our team brought on a college student for three months. During that time I mentored them on their development tasks, our software development life cycle, version control, and working on a real-world development team. During this time I had the opportunity to give feedback on code, show how things learned in the classroom apply to corporate development, and work through actual software engineering problems.
+\end{Detail}
+\fi      %% INCLUDE only for cv style
+
+\BigGap
+\Entry
+\textbf{Axeda Reporting -- A Guide to Service Intelligence} (Trade Conference)
+\hfill
+\DatestampYMD{2013}{05}{08}
+
+Axeda Connection Conference, Axeda, Inc.
+\begin{Detail}
+\Item
+Live presentation for Axeda customers to review and demonstrate new features added to the Cognos big data reporting product.
+\ifB
+\Item
+From the conference program:
+\begin{quote}
+Service Intelligence enables your organization to apply analytics and decision-making, anytime, anywhere. See an overview of Axeda Reporting and what changes are coming in the near future. This session will include live demos of standard reports, as well creating custom reports with Report Studio.
+\end{quote}
+\fi
+\end{Detail}
+
+\ifC      %% INCLUDE only for cv style
+\BigGap
+\Entry
+\textbf{Java Technical Lead and Team Lead}
+\hfill
+\DatestampY{2005} -- 
+\DatestampY{2010}
+
+Paychex, Inc.
+\begin{Detail}
+\BulletItem
+As one of the technical leads for Java, developers on the extended team would come to me when they had deep technical questions about their code or odd errors that they couldn't track down. I would also have conversations with experienced developers to determine the ``best'' solution for a problem that would meet given technical or scheduling constraints.
+\BulletItem
+The department I was in created training exercises for new developers to introduce them to the tools and development environment. I worked with each new developer to review their answers to the Java exercises,  answer questions as they worked through them, and working through topics new to them.
+\BulletItem
+I gave quarterly presentations to the extended team to introduce Java technologies and internal systems. Topics included web application redesigns and base functionality, Java JSP and servlet development, and web testing techniques.
+\BulletItem
+As a Java team lead, I was responsible for a small team of developers. Since this was the first job after college for some, as we reviewed their code I would see opportunities to mentor them on advanced Java and JavaScript concepts and topics.
+\end{Detail}
+\fi      %% INCLUDE only for cv style
+
+\fi %% DELETE entire PRESENTATION SECTION 
+
+%%%%%%%%%%%%
+%% AWARDS %%
+%%%%%%%%%%%%
+\iffalse %% SKIP AWARDS
+
+\Section
+{Awards}
+{Awards}
+{PDF:Awards}
+\textbf{Paychex Paragon Award for Resiliency}
+\hfill
+\DatestampY{2019}
+%% \DatestampYM{2019}{01}
+\begin{Detail}
+%% Every year, five projects are chosen across Paychex that demonstrate resiliency, exceptional delivery, operational efficiency, etc.
+Our project, "Adaptive Load Balancing", was chosen for this annual award. 
+It routes requests in F5 BigIP GTM and LTMs across servers and data centers based on server load, real-time statistics, and other measures to reduce outages and improve response times for services.
+\end{Detail}
+\BigGap
+
+\textbf{AppDynamics Scale Award}
+\hfill
+%% \DatestampYM{2015}{11}
+\DatestampY{2015}
+%% \begin{Detail}
+%% Awarded by AppDynamics to the company that was able to quickly deploy the AppDynamics tool across the most complex environment. 
+
+Awarded for successfully deploying AppDynamics to over 20,000 JBoss, WebLogic, and Windows IIS servers across our fleet in our first year.
+%% \end{Detail}
+\fi %% SKIP AWARDS
+
+%%%%%%%%%%%%%%%%%%
+%% PUBLICATIONS %%
+%%%%%%%%%%%%%%%%%%
+
+%%%%%%%
+%%% KEEP THIS SECTION???
+%%%%%%%
+\iffalse
+\Section
+{Publications}
+{Publications}
+{PDF:Publications}
+
+\SubSection
+{Technical Editor}
+{Technical Editor}
+{PDF:TechnicalEditor}
+
+%% MLA format
+\Entry
+\href{https://www.amazon.com/Oracle-Certified-Associate-ProgrammerStudy/dp/1849687323}
+{Reece, Richard M. \textit{Oracle Certified Associate, Java SE 7 Programmer Study Guide}, Packt Publishing, 2012}
+
+\Gap
+\Entry
+\href
+{https://www.amazon.com/Java-Concurrency-Cookbook-FernandezJavier/dp/1849687889}
+{Gonzalez, Javier Fernandez. \textit{Java 7 Concurrency Cookbook}, Packt Publishing, 2012}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% OTHER ACTIVITIES %%
+%%%%%%%%%%%%%%%%%%%%%%
+% \Section
+% {Activities}
+% {Activities}
+% {PDF:OtherActivities}
+
+% \Entry
+% \textbf{Leader, Boy Scouts and Cub Scouts}
+% \hfill
+% \DatestampY{2007} -- Present
+
+% \Entry
+% \textbf{FAA Certified Private Pilot}
+%%\hfill
+%%\DatestampY{2000}
+\iffalse
+  \Gap
+  \begin{center}
+    [\textit{\CVNote}]
+  \end{center}
+\fi
+  
+\end{Body}
+
+%%%%%%%%%%%
+% CV NOTE %
+%%%%%%%%%%%
+
+%% \UseNoteFont%
+%% \null\hfill%
+%% [\textit{\CVNote}]
+\end{document}
+
