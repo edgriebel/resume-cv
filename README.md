@@ -15,27 +15,39 @@ I can also store different versions or notes to myself in the comments in the `.
 
 The main XeLaTeX source file is `Ed_Griebel_onepage_CV.tex`; the compiled document is `Ed_Griebel_onepage_CV.pdf`.
 
-Instructions for compiling the document (TeX &rarr;(XeLaTeX)&rarr; PDF):
-- **Even More Preferred Method:**
-	- Install Docker
-		- MacOS: `brew install docker`
-	- Invoke `make` target that runs Docker image:
-		- `make make-docker`
-	- See "Build new docker image as needed" below
+### Instructions for compiling the document (TeX &rarr;(XeLaTeX)&rarr; PDF):
+#### Preferred Method:
+- Install Docker
+  - MacOS: `brew install docker`
+- Invoke `make` target that runs Docker image:
+  - `make make-docker`
+- See "Build new docker image as needed" below
 
-- **Preferred Method:**
-	- Install Docker
-		- MacOS: `brew install --cask docker`
-	- Run Docker container to create PDF
-		- `docker run -v $PWD:/data --rm edgriebel/tinytex-xelatex /bin/bash -c 'cd data; make'`
-	- Run Docker interactively
-		- `docker run -it -v $PWD:/data --rm edgriebel/tinytex-xelatex`
-	- Build new docker image as needed
-		- `docker build -t tinytex-xelatex`
-		- log into docker: `docker login --username=yourhubusername --email=youremail@company.com`
-		- tag the image
-		- Push to docker hub: `docker push yourhubusername/repo-name`
+#### Manual method
+- _replace `edgriebel` with your Docker username in commands and Makefile_
+- Install Docker
+  - MacOS: `brew install --cask docker`
+- Run Docker container to create PDF
+  - `docker run -v $PWD:/data --rm edgriebel/tinytex-xelatex /bin/bash -c 'cd data; make'`
+- Run Docker interactively
+  - `docker run -it -v $PWD:/data --rm edgriebel/tinytex-xelatex`
 
+### Build new docker image as needed
+- `docker build -t tinytex-xelatex`
+- log into docker: `docker login --username=yourhubusername --email=youremail@company.com`
+- tag the image
+- Push to docker hub: `docker push yourhubusername/repo-name`
+
+### Build multi-architecture docker image
+- Setup `docker buildx`: https://www.docker.com/blog/multi-arch-images/
+  - `docker buildx create --name mybuilder`
+  - `docker buildx use mybuilder`
+  - `docker buildx inspect --bootstrap`  # verify installation
+- build multi-arch image
+  - `docker buildx build --platform linux/arm/v7,linux/amd64,linux/arm64 -t <yourid>/tinytex-xelatex:latest -f Dockerfile . --load`
+  - to push to your own repo replace "--load" with "--push" (you may need to run `docker login` first)
+
+### Old instructions to generate Latex file
 
 - **Method 0:** On Windows:
 	- install MiKTeX: <https://miktex.org/howto/install-miktex>. 
