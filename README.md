@@ -4,7 +4,7 @@ Full Stack Developer with over 20 years of success creating software solutions.
 Wide breadth of experience in multiple industries, languages, tools, and third-party applications demonstrates success.
 Excitement about creating code to deliver high quality useful software results in systems that support business growth.
 
-Resume: [Ed_Griebel_CV.pdf](https://raw.githubusercontent.com/edgriebel/resume-cv/master/Ed_Griebel_CV.pdf)
+Resume: [Ed_Griebel_onepage_CV.pdf](https://raw.githubusercontent.com/edgriebel/resume-cv/master/Ed_Griebel_onepage_CV.pdf)
 
 # Creating the resume:
 
@@ -13,35 +13,67 @@ I can also store different versions or notes to myself in the comments in the `.
 
 ## How to Build
 
-The main XeLaTeX source file is `Ed_Griebel_CV.tex`; the compiled document is `Ed_Griebel_CV.pdf`.
+The main XeLaTeX source file is `Ed_Griebel_onepage_CV.tex`; the compiled document is `Ed_Griebel_onepage_CV.pdf`.
 
-Instructions for compiling the document (TeX &rarr;(XeLaTeX)&rarr; PDF):
+### Instructions for compiling the document (TeX &rarr;(XeLaTeX)&rarr; PDF):
+#### Preferred Method:
+- Install Docker
+  - MacOS: `brew install docker`
+- Invoke `make` target that runs Docker image:
+  - `make make-docker`
+- See "Build new docker image as needed" below
+
+#### Manual method
+- _replace `edgriebel` with your Docker username in commands and Makefile_
+- Install Docker
+  - MacOS: `brew install --cask docker`
+- Run Docker container to create PDF
+  - `docker run -v $PWD:/data --rm edgriebel/tinytex-xelatex /bin/bash -c 'cd data; make'`
+- Run Docker interactively
+  - `docker run -it -v $PWD:/data --rm edgriebel/tinytex-xelatex`
+
+### Build new docker image as needed
+- `docker build -t tinytex-xelatex`
+- log into docker: `docker login --username=yourhubusername --email=youremail@company.com`
+- tag the image
+- Push to docker hub: `docker push yourhubusername/repo-name`
+
+### Build multi-architecture docker image
+- Setup `docker buildx`: https://www.docker.com/blog/multi-arch-images/
+  - `docker buildx create --name mybuilder`
+  - `docker buildx use mybuilder`
+  - `docker buildx inspect --bootstrap`  # verify installation
+- build multi-arch image
+  - `docker buildx build --platform linux/arm/v7,linux/amd64,linux/arm64 -t <yourid>/tinytex-xelatex:latest -f Dockerfile . --load`
+  - to push to your own repo replace "--load" with "--push" (you may need to run `docker login` first)
+
+### Old instructions to generate Latex file
 
 - **Method 0:** On Windows:
 	- install MiKTeX: <https://miktex.org/howto/install-miktex>. 
 		- This installs TexWorks also.
 		- This installs necessary TeX apps, libraries, and fonts specified in doc and also works well with proxies (set up in MiKTeX Console)
 		- I have found this works better than installing xelatex and latexmk in Cygwin
-	- Open `Ed_Griebel_CV.tex`
+	- Open `Ed_Griebel_onepage_CV.tex`
 	- Select `XeLaTeX` from drop-down
 	- Click play button on left
 		- Note that this takes a long time the first time it's run and appears to be stuck loading `tex/latex/base/size10.clo`
 	- Run a second time to update the page numbers at the bottom of each page
 
 - **Method 1:** Use `latexmk` for fully automated document generation:
-	- `latexmk -xelatex "CV.tex"`
+	- `latexmk -xelatex "Ed_Griebel_onepage_CV.tex"`
 	(add the `-pvc` switch to automatically recompile on changes)
 
 - **Method 2:** Use `XeLaTeX` directly:
-	- `xelatex "CV.tex"`
+	- `xelatex "Ed_Griebel_onepage_CV.tex"`
 	(run multiple times to resolve cross-references if needed)
 
 - **Method 3:** Use `XeLaTeX` via docker container:
 	- install docker
-	- `docker build -t texlive .`
-	- `docker run -v <this directory>:/data/resume-cv --rm texlive`
+	- `docker build -t tinytex .`
+	- `docker run -v `pwd`:`pwd` -w `pwd` --rm tinytex make`
 		- This updates the images displayed in this README also (in Miscellaneous directory)
-	- Look for `Ed_Griebel_CV.pdf`
+	- Look for `Ed_Griebel_onepage_CV.pdf`
 
 Based on: simple-resume-cv
 ================
@@ -53,8 +85,7 @@ Template for a simple resume or curriculum vitae (CV), in XeLaTeX.
 
 **Sample pages (click to enlarge):**
 
-<img height="500" src="https://raw.githubusercontent.com/edgriebel/resume-cv/master/Miscellaneous/Ed_Griebel_CV-0.png" alt="CV-0">
-<img height="500" src="https://raw.githubusercontent.com/edgriebel/resume-cv/master/Miscellaneous/Ed_Griebel_CV-1.png" alt="CV-1">
+<img height="500" src="https://raw.githubusercontent.com/edgriebel/resume-cv/master/Miscellaneous/Ed_Griebel_Resume-1.png" alt="CV-1">
 <img height="500" src="https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/Miscellaneous/CV-03.png" alt="summary">
 
 ## Main Features
