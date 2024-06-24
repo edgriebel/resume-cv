@@ -9,7 +9,7 @@ jobs:
     container: edgriebel/tinytex-xelatex
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multi-line script
@@ -18,9 +18,10 @@ jobs:
         echo test, and deploy your project.
     - name: What's there?
       run: ls -la
-      #- name: Test xelatex
-      #run: latexmk -xelatex Ed_Griebel_CV.tex
     - name: test build
       run: make all
     - name: What happened?
       run: ls -lt
+    - name: Create release
+      run: |
+        gh --help
