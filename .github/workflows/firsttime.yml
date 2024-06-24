@@ -18,6 +18,15 @@ jobs:
         echo test, and deploy your project.
     - name: What's there?
       run: ls -la
+    - name: Hack it!
+      run: |
+        F=Ed_Griebel_Resume.tex
+        wc $F
+        NL=$(wc -l < $F)
+        echo Len: ${NL}
+        echo $(( NL - 5 ))
+        sed -i "$(( NL - 5 ))iHello" $F
+        wc $F
     - name: test build
       run: make all
     - name: What happened?
