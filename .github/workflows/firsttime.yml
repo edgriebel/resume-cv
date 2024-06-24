@@ -22,4 +22,4 @@ jobs:
       #- name: Test xelatex
       #run: latexmk -xelatex Ed_Griebel_CV.tex
     - name: test build
-      run: make 
+      run: make all
