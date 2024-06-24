@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu 
+    runs-on: ubuntu-latest 
     # blang/latex:ubuntu
 
     steps:
