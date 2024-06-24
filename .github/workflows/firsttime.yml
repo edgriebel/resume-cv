@@ -21,7 +21,5 @@ jobs:
       run: ls -la
       #- name: Test xelatex
       #run: latexmk -xelatex Ed_Griebel_CV.tex
-    - name: what am I looking at?
-      run: git log -n 3
     - name: test build
       run: make 
