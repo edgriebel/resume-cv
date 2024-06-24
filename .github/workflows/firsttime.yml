@@ -7,7 +7,6 @@ jobs:
 
     runs-on: ubuntu-latest 
     container: edgriebel/tinytex-xelatex
-    # blang/latex:ubuntu
 
     steps:
     - uses: actions/checkout@v1
@@ -23,3 +22,5 @@ jobs:
       #run: latexmk -xelatex Ed_Griebel_CV.tex
     - name: test build
       run: make all
+    - name: What happened?
+      run: ls -lt
