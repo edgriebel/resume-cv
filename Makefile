@@ -1,4 +1,4 @@
-export DOC=Ed_Griebel_onepage_CV
+export DOC=Ed_Griebel_Resume
 
 DOCKER_IMAGE=edgriebel/tinytex-xelatex
 # DOCKER_IMAGE=edgriebel/tinytex-xelatex-alpine

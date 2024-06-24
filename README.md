@@ -85,7 +85,7 @@ Template for a simple resume or curriculum vitae (CV), in XeLaTeX.
 
 **Sample pages (click to enlarge):**
 
-<img height="500" src="https://raw.githubusercontent.com/edgriebel/resume-cv/master/Miscellaneous/Ed_Griebel_onepage_CV-1.png" alt="CV-1">
+<img height="500" src="https://raw.githubusercontent.com/edgriebel/resume-cv/master/Miscellaneous/Ed_Griebel_Resume-1.png" alt="CV-1">
 <img height="500" src="https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/Miscellaneous/CV-03.png" alt="summary">
 
 ## Main Features
