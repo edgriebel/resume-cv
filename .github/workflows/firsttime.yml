@@ -6,6 +6,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest 
+    container: edgriebel/tinytex-xelatex
     # blang/latex:ubuntu
 
     steps:
