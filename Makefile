@@ -1,11 +1,15 @@
 export DOC=Ed_Griebel_Resume
 
-DOCKER_IMAGE=edgriebel/tinytex-xelatex
+DOCKER_IMAGE=edgriebel/tinytex-xelatex-2026
 # DOCKER_IMAGE=edgriebel/tinytex-xelatex-alpine
 
 DEFAULT: make-docker
 
 all: clean $(DOC).pdf images
+
+view: $(DOC).pdf
+	# open only works on Mac
+	-open $(DOC).pdf 
 
 %.pdf: %.tex
 	latexmk -xelatex $?
@@ -28,6 +32,7 @@ cleanall: clean
 make-docker :
 	docker run -v /Users/ed/Documents/Personal/GitHub/resume-cv:/data --rm $(DOCKER_IMAGE) /bin/sh -c "cd data; make DOC=$(DOC) all"
 	make clean
+	make view
 
 make-image : Dockerfile
 	docker build -t $(DOCKER_IMAGE) .
