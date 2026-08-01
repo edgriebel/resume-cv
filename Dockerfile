@@ -24,6 +24,7 @@ RUN tlmgr install xetex
 RUN fmtutil-sys --all
 
 RUN tlmgr install hyphenat tracklang xltxtra realscripts detex
+RUN tlmgr install cmap
 
 # Container builds pdf file and then exits
 ## CMD cd resume-cv; latexmk -xelatex Ed_Griebel_CV.tex && convert -density 150 -quality 90 -background white -alpha remove -alpha off Ed_Griebel_CV.pdf Miscellaneous/Ed_Griebel_CV.png
