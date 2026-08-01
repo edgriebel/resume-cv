@@ -74,7 +74,7 @@
 \RequirePackage[
 left=1.0in, %% 0.70in,
 right=1.0in, %% 0.70in,
-top=0.60in,
+top=0.50in,
 bottom=0.40in,
 nohead,
 %% includefoot

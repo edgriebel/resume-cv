@@ -4,7 +4,7 @@ Full Stack Developer with over 20 years of success creating software solutions.
 Wide breadth of experience in multiple industries, languages, tools, and third-party applications demonstrates success.
 Excitement about creating code to deliver high quality useful software results in systems that support business growth.
 
-Resume: [Ed_Griebel_onepage_CV.pdf](https://raw.githubusercontent.com/edgriebel/resume-cv/master/Ed_Griebel_onepage_CV.pdf)
+Resume: [Ed_Griebel_Resume.pdf](https://raw.githubusercontent.com/edgriebel/resume-cv/master/Ed_Griebel_Resume.pdf)
 
 # Creating the resume:
 
@@ -13,7 +13,7 @@ I can also store different versions or notes to myself in the comments in the `.
 
 ## How to Build
 
-The main XeLaTeX source file is `Ed_Griebel_onepage_CV.tex`; the compiled document is `Ed_Griebel_onepage_CV.pdf`.
+The main XeLaTeX source file is `Ed_Griebel_Resume.tex`; the compiled document is `Ed_Griebel_Resume.pdf`.
 
 ### Instructions for compiling the document (TeX &rarr;(XeLaTeX)&rarr; PDF):
 #### Preferred Method:

@@ -22,6 +22,7 @@
 %% PREAMBLE.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% \usepackage{cmap}
 % CV Info (to be customized).
 \newcommand{\CVAuthor}{Edward E Griebel Jr.}
 \newcommand{\CVTitle}{Ed Griebel CV}
@@ -30,7 +31,13 @@
 \newcommand{\CVWebpage}{https://www.edgriebel.com/}
 \newcommand{\CVWebpageDisp}{www.edgriebel.com}
 
-\newcommand{\tech}[1]{\Gap\textrm{Technologies:} #1}
+%% \newcommand{\tech}[1]{\Gap\textrm{Technologies:} #1}
+%% \newcommand{\tech}[1]{\Gap\begin{center} #1 \end{center}}
+\newcommand{\tech}[1]{\Gap Tech stack: #1}
+%% \newcommand{\techsep}{\textrm{\:$\bullet$\:} }
+%% \newcommand{\techsep}{\textrm{\:$\cdot$\:} }
+\newcommand{\techsep}{/ }
+
 % PDF settings and properties.
 \hypersetup{
 pdftitle={\CVTitle},
@@ -122,14 +129,29 @@ $|$ %% \,\SubBulletSymbol\,
 %% -- ChatGPT
 %% An accomplished full stack developer with consistent successes across multiple industries. 
 %% Deeply passionate about collaborating with others to design and deliver innovative systems that address complex business challenges. 
-\begin{center}
-Skilled Staff Software Engineer with consistent success in building and improving systems across multiple industries while making teams more productive.
-Adept at solving complex business challenges by partnering with others.
+%%\begin{center}
+\comment{
+Senior Software Engineer with deep expertise in distributed systems, infrastructure automation, and high-performance backend development. 
+Proven ability to ship production-grade code at scale and solve complex architectural bottlenecks as an individual contributor.
+}
+%% Staff Software Engineer with consistent success in building robust systems, mentoring, and making teams more productive.
 
-\BigGap
-Core competencies:
-Agile Leadership $|$ Cross-Functional Collaboration $|$ \comment{System Design $|$ } \comment{Linux $|$} Mentoring $|$ Python $|$ Java $|$ \comment{CI/CD Automation $|$ } SQL 
-\end{center}
+
+%% \begin{quote}
+\comment{Staff} Experienced Software Engineer with a history of creating technical systems and scaling engineering talent. 
+Proven success in shipping production-grade code at scale, mentoring interns through senior staff, and driving \comment{organizational} productivity through automation and targeted process improvements.
+%% \end{quote}
+
+\comment{
+Staff Software Engineer with track record of multiple successes in building robust systems, mentoring, and making teams more productive.
+Adept at partnering with people and teams to solve complex business challenges.
+}
+
+%% \BigGap
+%% Core competencies:
+%% Agile Leadership $|$ Cross-Functional Collaboration $|$ \comment{System Design $|$ } \comment{Linux $|$} Mentoring $|$ Python $|$ Java $|$ \comment{CI/CD Automation $|$ } SQL 
+%% \end{center}
+
 %% \Gap
 %% With 7 years of remote experience I excel in working effectively in remote, hybrid, and onsite environments.
 %% -- ChatGPT
@@ -145,43 +167,78 @@ Agile Leadership $|$ Cross-Functional Collaboration $|$ \comment{System Design $
 {PDF:ProfessionalWorkExperience}
 
 \Entry
+\textbf{Lead Software/Solution Engineer}, Paychex (via Solu Technology Partners)
+\hfill
+\DatestampYM{2024}{09} -- Present
+
+%% tighter \Gap
+\begin{Detail}
+%% Technical lead for development teams, focusing on Artificial Intelligence and Java initiatives.
+Leading an Agile team of SWEs and SDETs to deliver functionality for a large payroll processing system.
+\Gap
+\BulletItem
+Led team with cross-functional partners to create REST interfaces to legacy payroll system, leading to 45\% of emailed payrolls being processed by an AI service agent.
+%% Led team to deliver REST interfaces for legacy system as part of multi-team effort for an AI customer service agent. 
+%% Coordinated resources and negotiated requirements for phased deliveries to meet aggressive deadlines.
+\BulletItem
+Delivered features in a compressed schedule to support recapturing \$700k in payments yearly to terminated workers.
+%% \BulletItem
+%% Leading and inspiring team in using AI tools and integrations to reduce support load during incident rotations.
+%% Summer 2026
+%% Led stabilization, development, testing, and release of an inherited complex calculation rewrite project. __Numbers??__
+\BulletItem
+Improved team productivity during rapid organizational and Agile SDLC changes by mentoring permanent, intern, and offshore teammates and encouraging a positive, proactive ownership mindset.
+\end{Detail}
+
+%% \Gap Technologies: Python \techsep Java \techsep GitHub Copilot \techsep Oracle SQL \techsep Splunk
+
+\tech{Python \techsep Java \techsep GitHub Copilot+Claude \techsep Oracle SQL \techsep Splunk}
+
+
+\BigGap
+
+\Entry
 \textbf{Staff Software Engineer (SRE)}, Netskope
 \hfill
-%% \DatestampY{2023} -- Present
-\DatestampYM{2023}{08} -- Present
+%% \DatestampY{2023} -- \DatestampY{2024}
+\DatestampYM{2023}{08} -- \DatestampYM{2024}{09}
 
-\Gap
+%% tighter \Gap
 \begin{Detail}
 
-Currently leading a team of Site Reliability Engineers to support Netskope's data-loss prevention product by aligning deliverables with partner roadmaps, including hands-on engineering and participating in oncall rotations.
+Led team of Site Reliability Engineers to support Netskope's data-loss prevention product.
+%% by aligning deliverables with partner roadmaps, including hands-on engineering and participating in on call rotations.
 
 \Gap
-
-\BulletItem
-Partnered with development team to migrate Kubernetes deployments (including FedRAMP) to Spinnaker.
 
 %% \BulletItem
 %% Capacity tool...
 
 \BulletItem
-Automated an existing process to calculate data center cost savings using Python and Jenkins, 
-cutting analysis from eight hours to 15 minutes and reducing ongoing spend by \$35,000 in the first month.
+Implemented improvements in on-call and change management procedures to improve productivity and stability.
+
+\BulletItem
+Automated data center cost analysis using Python and Jenkins, resulting in a 97\% reduction in analysis time and \$35k in first-month savings.
+%% Automated manual process to calculate data center cost savings using Python and Jenkins. 
+%% 97\% reduction in data gathering and analysis time (eight hours to 15 minutes) and reduced data center spend by \$35,000 in the first month.
 
 %% \BulletItem
 %% Participate in and supervise L1 and L2 24x7 on-call rotations during multi-year Kubernetes transformation.
 
 \BulletItem
-Implemented improvements in on-call and change management procedures to improve productivity and stability.
+Led the migration of private cloud and FedRAMP Kubernetes deployments to Spinnaker CI/CD.
+%% Partnered with dev teams to migrate Kubernetes deployments (private cloud and FedRAMP) to Spinnaker CI/CD.
 
-\BulletItem
-Mentor and guide for team members to level them up and ensure that work is supportable and of sufficient quality.
+%% 20250501
+%% \BulletItem
+%% Mentored and leveled up team members and ensured that work was supportable and of sufficient quality.
 
 %% \BulletItem
 %% Implement utility to predict database capacity requirements based on existing customer metrics.
 
 \end{Detail}
 
-\tech{Python $|$ Kubernetes $|$ Grafana $|$ Prometheus $|$ Spinnaker $|$ Jenkins}
+\tech{Python \techsep Kubernetes \techsep Grafana \techsep Prometheus \techsep Spinnaker \techsep Jenkins}
 
 \BigGap
 
@@ -202,7 +259,7 @@ Rochester, New York
 
 \Gap
 \begin{Detail}
-Lecturer for courses in Java, SQL/DBMS, and commercial software engineering practices.
+Lecturer for courses in Java, SQL/DBMS, Python/shell scripting, and engineering practices in industry.
 \end{Detail}
 
 \BigGap
@@ -213,22 +270,23 @@ Lecturer for courses in Java, SQL/DBMS, and commercial software engineering prac
 \hfill
 \DatestampYM{2021}{08} -- \DatestampYM{2023}{07}
 
-%%\Gap
-%%\BulletItem
-
-\Gap
 \begin{Detail}
-Member of Enterprise Provisioning team that automated creation of thousands of physical and virtual machines,
-and Ad Serving team that dynamically allocated capacity to Machine Learning models for Facebook and Instagram ads.
 
-\Gap 
+Engineered global-scale infrastructure for automated server provisioning and optimized dynamic capacity allocation for Facebook and Instagram ad-serving AI models.
 
 \BulletItem
-	Created system to automate firmware updates for multiple hardware vendors across 10,000+ physical servers, eliminating ad-hoc processes and saving a week of effort for each team supporting a cluster.
+Automated firmware updates for 10,000+ Dell, HP, and Supermicro servers. 
+Saved three days of effort every quarter for each of 25 clusters by eliminating ad-hoc updates.
+%% Automated firmware updates for multiple hardware vendors across 10,000+ physical servers, saving nearly a week of engineering effort per cluster every quarter.
+
 \BulletItem
-	Improved user experience by improving documentation and procedures, and using systems to automatically detect and troubleshoot common errors. The team went from 20 hours per week handling on-call issues to under five.
+Reduced on-call load \comment{by 80\% (down to four hours per week)} from 20 to four hours per week by improving documentation, implementing intake processes, and automating error detection and troubleshooting.
+
 \BulletItem
-	Led project to centralize configuration changes to ML/AI models in Meta’s ad delivery stack, allowing machine learning engineers to safely make changes while avoiding unintended problems or outages.
+Supported and enhanced a platform in Python, Terraform, and Chef that enabled partners to provision bare metal and virtual servers, increasing self-service tasks by 20-25\%.
+
+\BulletItem
+Centralized configuration management for ML/AI models in the ad delivery stack, allowing AI Engineers to focus on model tuning while mitigating outage risks.
 
 \iffalse 	%% Old version
 %% Production Engineering was created at Facebook to work with engineering teams and partners to champion the Reliability, Scalability, Performance, and Security posture of production services. PEs are hybrid software and systems engineers; they are the glue holding things together, whether that’s infrastructure and software or teams and processes.
@@ -264,7 +322,7 @@ These changes reduced oncall shift impact by 60\% to under 5 hours per week.
 %% Selected projects: adding reliability and performance metrics including reporting to existing services; automating firmware updates across multiple hardware vendors.
 \fi 		%% iffalse
 
-\tech{Python $|$ Rust $|$ SQL $|$ Terraform}
+\tech{Python \techsep Rust \techsep SQL \techsep Terraform \techsep Chef}
 
 \end{Detail}
 
@@ -280,28 +338,34 @@ These changes reduced oncall shift impact by 60\% to under 5 hours per week.
 \hfill
 Rochester, New York
 \fi
-\Gap
+%% tighter \Gap
 \begin{Detail}
-Technical lead for credit card processing including accounting ledgers and inbound transaction APIs.
+%% Technical lead for credit card processing including accounting ledgers and inbound transaction APIs.
+%% Technical lead for credit card processing including accounting ledgers and inbound transaction APIs for new white-label credit card product.
+Technical lead for new white-label credit card product including transaction ledgers and inbound customer-facing APIs.
 
+\iffalse
 \Gap
 
 \BulletItem
 Worked closely with developers, product owners, and operations to create a new white-label credit card product. 
+\fi
+
 %% \BulletItem
 %% Established/enhanced processes and procedures for product development and support.
 %% \BulletItem Mentored engineers with designs and general software engineering practices.
 
-\tech{Java $|$ MySQL $|$ Spring Boot $|$ Docker}
+\tech{Java \techsep MySQL \techsep Spring Boot \techsep Docker}
 
 \end{Detail}
 
 \iffalse %% Hide Logical Operations
+\BigGap
 
 \Entry
-\textbf{Consultant - Logical Operations} \textit{(Part-Time)}
+\textbf{Consultant} - Logical Operations \textit{(Part-Time)}
 \hfill
-Occasionally since \DatestampY{2020}
+\DatestampY{2020} - \DatestampY{2022}
 
 %%\Gap
 %%\BulletItem
@@ -312,7 +376,7 @@ Rochester, New York
 
 \begin{Detail}
 \BulletItem
-Created teaching materials and was consulted for new courses in Machine Learning, Artificial Intelligence, and Data Science.
+Created teaching materials and subject matter expert for new courses in Machine Learning, Artificial Intelligence, and Data Science.
 \end{Detail}
 \fi %% Hide Logical Operations
 
@@ -329,24 +393,24 @@ Created teaching materials and was consulted for new courses in Machine Learning
 Rochester, New York
 \fi
 
-\Gap
+%% tighter \Gap
 
 \begin{Detail}
 %% Built consensus around and implemented processes and procedures for primary SaaS product to improve supportability and developer productivity.
 
 %% \Gap
-\BulletItem
+%% \BulletItem
 %% Researched issues with performance and stability issues and implemented short- and long-term projects to address them.
-Researched issues with performance and stability issues and initiated projects to address them.
+Researched and implemented plans to address core performance/stability issues and guided culture in satellite office.
 
-\BulletItem
-Mentored junior developers in company's platform and industry best practices.
+%% \BulletItem
+%% Mentored junior developers in company's platform and industry best practices.
 %% Negotiated with managers, product owners, and CTO for resources and prioritization.
 %% Determined and created immediate and 1-year plans to address performance issues impacting product stability and scalability.
 %% \BulletItem
 %% Negotiated with managers, product owners, and CTO for resources and prioritization.
 
-\tech{Python $|$ Flask $|$ JavaScript $|$ Bootstrap $|$ MySQL $|$ Docker $|$ Elasticsearch}
+\tech{Python \techsep Flask \techsep JavaScript \techsep Bootstrap \techsep MySQL \techsep Docker \techsep Elasticsearch}
 
 \end{Detail}
 
@@ -370,7 +434,7 @@ Mentored junior developers in company's platform and industry best practices.
 Rochester, New York
 \fi
 
-\Gap
+%% tighter \Gap
 \begin{Detail}
 \iffalse
 At Paychex I worked with multiple cross-functional teams to build: an inventory system to track hosts, JVMs, and databases; machine learning systems in Python to efficiently rebalance databases and predict system utilization; custom Chaos Monkey ro randomly terminate process to find configuration weaknesses; and implemented AppDynamics on over 20,000 JVMs.
@@ -378,19 +442,23 @@ At Paychex I worked with multiple cross-functional teams to build: an inventory 
 
 \iftrue
 \BulletItem
-Created system to rebalance 20,000 databases among 200 Azure cloud pools with statistical and ML techniques.
+Created system to rebalance 24,000 databases \comment{among} on 200 Azure MSSQL servers using ML and statistical techniques.
 
 %% \BulletItem Built internal inventory system with web and REST APIs providing a single source of truth for virtualized and physical hosts, JVMs, CLRs, databases, and middleware. 
 %% Relationships sourced from external management systems including AppDynamics, Puppet, ServiceNow, and Oracle.
 
 \BulletItem
-Replaced a bespoke system with AppDynamics across 20,000 JVMs to track inventory and metrics, saving 4 FTEs.
+Migrated a bespoke inventory system to AppDynamics, saving 4 FTEs by tracking metrics on 20,000 Java JVMs.
 
-\BulletItem
-Created custom Chaos Monkey to regularly terminate middleware and Java processes randomly. 
+%% 20250501
+%% \BulletItem
+%% Created custom Chaos Monkey to regularly terminate middleware and Java processes randomly. 
 %% in Production and Dev environments.
+%% 20250501
+%% \BulletItem
+%% Built single source of truth inventory system using relationships from Puppet, ServiceNow, and Oracle.
 
-\tech{Java $|$ JavaScript $|$ Python $|$ Scikit-Learn $|$ \comment{TensorFlow $|$} SQL \comment{$|$ AppDynamics} $|$ Machine Learning}
+\tech{Java \techsep JavaScript \techsep Python \techsep Scikit-Learn \techsep SQL \techsep AppDynamics \techsep Machine Learning}
 \fi
 
 \end{Detail}
@@ -404,12 +472,22 @@ Created custom Chaos Monkey to regularly terminate middleware and Java processes
 
 \Entry
 \textbf{Adjunct Professor}, Rochester Institute of Technology
-\BulletItem 
-Lecturer for courses in Java, SQL/DBMS, and commercial software engineering practices
+%% \BulletItem 
 
+Lecturer for courses in Java, SQL/DBMS, Python/shell scripting, and software industry engineering practices.
+
+\Gap
 \Entry
-\textbf{Lead Software Engineer}, Axeda/PTC
-\hfill 
+\textbf{Consultant and Subject Matter Expert}, Logical Operations %% \textit{(Part-Time)}
+%% \hfill
+%% \DatestampY{2020} - \DatestampY{2022}
+%% \BulletItem
+
+Creator and advisor for Machine Learning, Artificial Intelligence, and Data Science courses.
+
+%% \Entry
+%% \textbf{Lead Software Engineer}, Axeda/PTC
+%% \hfill 
 %% \DatestampYM{2010}{06} --  \DatestampYM{2013}{06}
 %% \DatestampY{2010} --  \DatestampY{2013}
 
@@ -474,7 +552,7 @@ Used Hudson to create a CI/CD pipeline for Dev and QA deployments.
 Member of architecture team to research and set five-year strategy for web application strategy.
 \fi
 
-\tech{Java, JavaScript, JSP, Struts, WebLogic, Oracle PL/SQL, Hudson/Jenkins}
+\tech{Java \techsep JavaScript \techsep JSP \techsep Struts \techsep WebLogic \techsep Oracle PL/SQL \techsep Hudson/Jenkins}
 \end{Detail}
 \fi %% NOTSELECTED
 
@@ -639,8 +717,8 @@ Led multi-site teams to create telecom applications in Java and SQL.
 \end{Detail}
 \fi %% NOTSELECTED
 
-\Entry
-\textbf{Senior Software Engineer}, JP Morgan Chase
+%% \Entry
+%% \textbf{Senior Software Engineer}, JP Morgan Chase
 \ifNOTSELECTED
 \begin{Detail}
 %% \BulletItem
@@ -648,8 +726,8 @@ Created trading systems for equity derivatives and HFT trading desks in C, C++, 
 \end{Detail}
 \fi %% NOTSELECTED
 
-\Entry
-\textbf{Software Engineer}, BlackRock Financial Management
+%% \Entry
+%% \textbf{Software Engineer}, BlackRock Financial Management
 \ifNOTSELECTED
 \begin{Detail}
 %% \BulletItem
@@ -671,14 +749,16 @@ Developed systems for MBS mortgage, Treasury, and Repo trading desks in C and C+
 
 \Entry
 \textbf{Master of Science in Computer Science} -
-Georgia Institute of Technology
+Georgia Institute of Technology %%, 2023 %% (GPA: 3.9/4.0)
 %% \hfill 2023
 
+\ifNOTSELECTED %% No detail...
 \BulletItem
-Algorithms, Compiler Optimization, CPU Architecture, LLVM Software Analysis, Applied ML and AI; GPA 3.9
+Coursework: Compiler Optimization, CPU Architecture, LLVM Software Analysis, Applied ML and AI
+\fi %% No detail....
 
 \iftrue %% SKIP Undergrad?
-\Gap
+%% \Gap
 
 \Entry
 \textbf{Bachelor of Science in Computer Science and Engineering} - 
@@ -881,7 +961,6 @@ Awarded for successfully deploying AppDynamics to over 20,000 JBoss, WebLogic, a
 {https://www.amazon.com/Java-Concurrency-Cookbook-FernandezJavier/dp/1849687889}
 {Gonzalez, Javier Fernandez. \textit{Java 7 Concurrency Cookbook}, Packt Publishing, 2012}
 \fi
-
 %%%%%%%%%%%%%%%%%%%%%%
 %% OTHER ACTIVITIES %%
 %%%%%%%%%%%%%%%%%%%%%%
@@ -889,12 +968,10 @@ Awarded for successfully deploying AppDynamics to over 20,000 JBoss, WebLogic, a
 % {Activities}
 % {Activities}
 % {PDF:OtherActivities}
-
 % \Entry
 % \textbf{Leader, Boy Scouts and Cub Scouts}
 % \hfill
 % \DatestampY{2007} -- Present
-
 % \Entry
 % \textbf{FAA Certified Private Pilot}
 %%\hfill
@@ -905,15 +982,14 @@ Awarded for successfully deploying AppDynamics to over 20,000 JBoss, WebLogic, a
     [\textit{\CVNote}]
   \end{center}
 \fi
-  
 \end{Body}
-
 %%%%%%%%%%%
 % CV NOTE %
 %%%%%%%%%%%
-
 %% \UseNoteFont%
 %% \null\hfill%
 %% [\textit{\CVNote}]
-\end{document}
 
+%% \/\/ Dirty Hack!! \/\/
+\let\clearpage\relax
+\end{document}
