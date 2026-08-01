@@ -8,8 +8,10 @@ DEFAULT: make-docker
 all: clean $(DOC).pdf images
 
 view: $(DOC).pdf
-	# open only works on Mac
-	-open $(DOC).pdf 
+	@# Open the PDF if an appropriate opener is available
+	@if command -v open >/dev/null 2>&1; then open "$(DOC).pdf"; \
+	elif command -v xdg-open >/dev/null 2>&1; then xdg-open "$(DOC).pdf"; \
+	else echo "No PDF opener found (tried 'open' and 'xdg-open')."; fi
 
 %.pdf: %.tex
 	latexmk -xelatex $?
@@ -30,9 +32,9 @@ cleanall: clean
 	rm -f $(DOC).pdf
 
 make-docker :
-	docker run -v /Users/ed/Documents/Personal/GitHub/resume-cv:/data --rm $(DOCKER_IMAGE) /bin/sh -c "cd data; make DOC=$(DOC) all"
-	make clean
-	make view
+	docker run -v "$(CURDIR):/data" --rm $(DOCKER_IMAGE) /bin/sh -c "cd data; make DOC=$(DOC) all"
+	$(MAKE) clean
+	$(MAKE) view
 
 make-image : Dockerfile
 	docker build -t $(DOCKER_IMAGE) .
